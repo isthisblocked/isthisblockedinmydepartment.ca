@@ -33,7 +33,11 @@ class Organization extends React.Component {
         <div>
           <h1>{organization.name_en}</h1>
           <p>
-            <a href={organization.url_en} target="_blank">
+            <a
+              href={organization.url_en}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Visit website
             </a>
           </p>

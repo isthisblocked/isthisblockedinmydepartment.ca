@@ -24,7 +24,11 @@ class Service extends React.Component {
           <p>
             <em>
               {this.props.data.servicesCsv.description}{' '}
-              <a href={this.props.data.servicesCsv.url} target="_blank">
+              <a
+                href={this.props.data.servicesCsv.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Visit website
               </a>
             </em>
