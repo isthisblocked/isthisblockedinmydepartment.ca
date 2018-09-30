@@ -33,7 +33,9 @@ class Organization extends React.Component {
         <div>
           <h1>{organization.name_en}</h1>
           <p>
-            <a href={organization.url_en}>Visit website</a>
+            <a href={organization.url_en} target="_blank">
+              Visit website
+            </a>
           </p>
           <p>Score: {this.props.data.organizationStatusRandomCsv.score}</p>
           <p>
