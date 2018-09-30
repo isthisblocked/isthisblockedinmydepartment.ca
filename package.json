@@ -1,16 +1,22 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "isthisblockedinmydepartment.ca",
+  "description": "Dashboard of online services blocked by federal government departments in Canada",
+  "version": "0.0.1",
+  "author": "Sean Boots <sean.boots@gmail.com>",
   "dependencies": {
-    "gatsby": "^2.0.0",
-    "gatsby-plugin-manifest": "^2.0.2",
+    "gatsby": "^2.0.12",
+    "gatsby-plugin-manifest": "^2.0.4",
     "gatsby-plugin-offline": "^2.0.5",
     "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sass": "^2.0.1",
+    "gatsby-source-filesystem": "^2.0.1",
+    "gatsby-transformer-csv": "^2.0.0",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.9.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "slash": "^2.0.0"
   },
   "keywords": [
     "gatsby"
@@ -27,6 +33,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/isthisblocked/isthisblockedinmydepartment.ca"
   }
 }
