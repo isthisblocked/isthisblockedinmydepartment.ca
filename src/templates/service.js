@@ -27,8 +27,9 @@ class Service extends React.Component {
               <ServiceDepartmentRow
                 key={row.node.id}
                 url={`/organization/${row.node.organization}/`}
-                organization={this.getOrganizationDetails(
-                  row.node.organization
+                organization_name={this.getOrganizationDetails(
+                  row.node.organization,
+                  'name_en'
                 )}
                 status={row.node[this.props.data.servicesCsv.short_name]}
                 dateUpdated={row.node.date_updated}
