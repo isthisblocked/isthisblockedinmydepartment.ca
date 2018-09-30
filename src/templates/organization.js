@@ -27,7 +27,7 @@ class Organization extends React.Component {
     console.log(this.props.data.allServicesCsv)
 
     return (
-      <Layout>
+      <Layout pageTitle={organization.name_en}>
         <div>
           <h1>{organization.name_en}</h1>
           <p>

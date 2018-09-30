@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import './layout.css'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, pageTitle }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -20,10 +20,22 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
-          title={data.site.siteMetadata.title}
+          title={
+            pageTitle
+              ? pageTitle + ' - ' + data.site.siteMetadata.title
+              : data.site.siteMetadata.title
+          }
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content:
+                'An unofficial dashboard of online services blocked by federal government departments in Canada',
+            },
+            {
+              name: 'keywords',
+              content:
+                'Canada, public service, Government of Canada, digital government, information technology, public sector',
+            },
           ]}
         >
           <html lang="en" />

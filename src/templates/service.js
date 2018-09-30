@@ -17,7 +17,7 @@ class Service extends React.Component {
     console.log('service!')
     console.log(this.props.data)
     return (
-      <Layout>
+      <Layout pageTitle={this.props.data.servicesCsv.name}>
         <div>
           <h1>{this.props.data.servicesCsv.name}</h1>
 
