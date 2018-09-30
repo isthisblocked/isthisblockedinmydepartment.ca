@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import _ from 'lodash'
+import DepartmentServiceRow from '../components/DepartmentServiceRow'
 
 class Organization extends React.Component {
   getServiceDetails = (short_name, field) => {
@@ -17,8 +18,9 @@ class Organization extends React.Component {
     const services = Object.keys(this.props.data.organizationStatusRandomCsv)
     const organization = this.props.data.organizationsCsv
 
-    // Remove the "score" entry from the list of services:
+    // Remove the "score" and "date_updated" entries from the list of services:
     delete services[0]
+    delete services[1]
 
     console.log('department!')
     console.log(services)
@@ -34,17 +36,18 @@ class Organization extends React.Component {
             <a href={organization.url_en}>Visit website</a>
           </p>
           <p>Score: {this.props.data.organizationStatusRandomCsv.score}</p>
+          <p>
+            Last updated:{' '}
+            {this.props.data.organizationStatusRandomCsv.date_updated}
+          </p>
 
           {services.map((item, i) => (
-            <p key={item}>
-              <Link
-                to={`/service/${item}/`}
-                title={this.getServiceDetails(item, 'description')}
-              >
-                {this.getServiceDetails(item, 'name')}
-              </Link>{' '}
-              - {this.props.data.organizationStatusRandomCsv[item]}
-            </p>
+            <DepartmentServiceRow
+              key={item}
+              url={`/service/${item}/`}
+              serviceDetails={this.getServiceDetails(item)}
+              status={this.props.data.organizationStatusRandomCsv[item]}
+            />
           ))}
         </div>
       </Layout>
@@ -84,6 +87,7 @@ export const organizationQuery = graphql`
     }
     organizationStatusRandomCsv(organization: { eq: $acronym }) {
       score
+      date_updated
       airtable
       appearin
       asana
