@@ -17,7 +17,7 @@ const slash = require(`slash`)
 // This set of functions creates the per-organization and
 // per-service pages, programatically from what is contained
 // in the source data CSV files.
-// This creates e.g. /departments/*/  and /services/*/
+// This creates e.g. /organization/*/  and /service/*/
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
   return new Promise((resolve, reject) => {
@@ -54,7 +54,9 @@ exports.createPages = ({ graphql, actions }) => {
       }
 
       // Create template pages.
-      const departmentTemplate = path.resolve(`./src/templates/department.js`)
+      const organizationTemplate = path.resolve(
+        `./src/templates/organization.js`
+      )
       const serviceTemplate = path.resolve(`./src/templates/service.js`)
 
       // console.log(result.data.allOrganizationsCsv)
@@ -68,8 +70,8 @@ exports.createPages = ({ graphql, actions }) => {
           // as a template component. The `context` is
           // optional but is often necessary so the template
           // can query data specific to each page.
-          path: `/departments/${edge.node.acronym_en}/`,
-          component: slash(departmentTemplate),
+          path: `/organization/${edge.node.acronym_en}/`,
+          component: slash(organizationTemplate),
           context: {
             id: edge.node.id,
             acronym: edge.node.acronym_en,
@@ -79,7 +81,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       _.each(result.data.allServicesCsv.edges, edge => {
         createPage({
-          path: `/services/${edge.node.short_name}/`,
+          path: `/service/${edge.node.short_name}/`,
           component: slash(serviceTemplate),
           context: {
             id: edge.node.id,

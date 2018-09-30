@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import _ from 'lodash'
 
-class Department extends React.Component {
+class Organization extends React.Component {
   getServiceDetails = (short_name, field) => {
     const nodes = _.map(this.props.data.allServicesCsv.edges, 'node')
     if (_.isUndefined(field)) {
@@ -38,7 +38,7 @@ class Department extends React.Component {
           {services.map((item, i) => (
             <p key={item}>
               <Link
-                to={`/services/${item}/`}
+                to={`/service/${item}/`}
                 title={this.getServiceDetails(item, 'description')}
               >
                 {this.getServiceDetails(item, 'name')}
@@ -52,12 +52,12 @@ class Department extends React.Component {
   }
 }
 
-export default Department
+export default Organization
 
 // TODO - In the future, the source CSV should be
 // restructured to avoid having to add new
 // service fields into the fragment below.
-export const departmentQuery = graphql`
+export const organizationQuery = graphql`
   query($acronym: String!) {
     organizationsCsv(acronym_en: { eq: $acronym }) {
       id

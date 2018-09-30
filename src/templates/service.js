@@ -24,7 +24,7 @@ class Service extends React.Component {
           {this.props.data.allOrganizationStatusRandomCsv.edges.map(
             (row, i) => (
               <p key={row.node.id}>
-                <Link to={`/departments/${row.node.organization}/`}>
+                <Link to={`/organization/${row.node.organization}/`}>
                   {this.getOrganizationDetails(
                     row.node.organization,
                     'name_en'
