@@ -1,0 +1,5 @@
+status,description,points
+unknown,(Unknown),0
+blocked,Blocked,-2
+restricted,Restricted,1
+open,Open by default,3

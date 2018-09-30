@@ -1,0 +1,29 @@
+name,category,short_name,url,date_added,user_submitted,description
+Airtable,dev,airtable,https://airtable.com/,2018-09-09,0,Collaborative API-based spreadsheet and database platform.
+Appear.in,messaging,appearin,https://appear.in/,2018-08-07,0,Videoconferencing software.
+Asana,collab,asana,https://asana.com/,2018-08-07,0,Time tracking and task management software.
+Basecamp,collab,basecamp,https://basecamp.com/,2018-08-07,0,Project management and team communications software.
+CircleCI,dev,circleci,https://circleci.com/,2018-08-07,0,Continuous integration and automated testing service.
+Doodle,collab,doodle,https://doodle.com/,2018-08-07,0,Online meeting coordination and scheduling tool.
+Dropbox,collab,dropbox,https://www.dropbox.com/,2018-08-07,0,Online document storage and syncing platform.
+Evernote,collab,evernote,https://evernote.com/,2018-08-07,0,Cross-platform note-taking software.
+Facebook,social,facebook,https://www.facebook.com,2018-09-29,0,Social networking service used worldwide.
+FluidSurveys,collab,fluidsurveys,http://fluidsurveys.com/,2018-08-07,0,Online survey platform.
+Github,dev,github,https://github.com/,2018-08-07,0,Software collaboration and online code repository platform.
+Google Chrome,browsers,googlechrome,https://www.google.com/chrome/,2018-08-07,0,Web browser from Google.
+Google Docs,collab,googledocs,https://www.google.ca/docs/about/,2018-08-07,0,"Real-time collaborative editing platform, including documents, spreadsheets, and presentations."
+Google Hangouts,messaging,googlehangouts,https://hangouts.google.com/,2018-08-07,0,Videoconferencing software.
+Hootsuite,social,hootsuite,https://hootsuite.com/,2018-08-07,0,Social media management platform.
+Mozilla Firefox,browsers,mozillafirefox,https://www.mozilla.org/en-CA/firefox/new/,2018-08-07,0,Open-source web browser from Mozilla.
+Prezi,collab,prezi,https://prezi.com/,2018-08-07,0,Online presentation design tool.
+Quip,collab,quip,https://quip.com/,2018-08-07,0,"Team collaboration platform, including documents, spreadsheets, checklists, and team chat ."
+Reddit,social,reddit,https://www.reddit.com/,2018-09-29,0,"Social media website including user communities, news, and other content."
+Skype,messaging,skype,https://www.skype.com/en/,2018-08-07,0,Videoconferencing and VoIP telephone software.
+Slack,messaging,slack,https://slack.com/,2018-08-07,0,Team chat platform.
+Slideshare,collab,slideshare,https://www.slideshare.net/,2018-08-07,0,Online presentation sharing website.
+SurveyMonkey,collab,surveymonkey,https://www.surveymonkey.com/,2018-08-07,0,Online survey and market research platform.
+Trello,collab,trello,https://trello.com/,2018-08-07,0,Team project management and visual task tracking software.
+Twitter,social,twitter,https://twitter.com/,2018-08-07,0,Real-time social media platform.
+WebEx,messaging,webex,https://www.webex.com/,2018-08-07,0,Videoconferencing and meeting software.
+YouTube,social,youtube,https://www.youtube.com/,2018-08-07,0,Online video-sharing website.
+Zotero,collab,zotero,https://www.zotero.org/,2018-08-07,0,Open-source bibliography and reference management software.
