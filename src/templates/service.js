@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import _ from 'lodash'
+import ServiceDepartmentRow from '../components/ServiceDepartmentRow'
 
 class Service extends React.Component {
   getOrganizationDetails = (acronym_en, field) => {
@@ -23,16 +24,15 @@ class Service extends React.Component {
 
           {this.props.data.allOrganizationStatusRandomCsv.edges.map(
             (row, i) => (
-              <p key={row.node.id}>
-                <Link to={`/organization/${row.node.organization}/`}>
-                  {this.getOrganizationDetails(
-                    row.node.organization,
-                    'name_en'
-                  )}
-                </Link>{' '}
-                – {row.node[this.props.data.servicesCsv.short_name]} – Updated:{' '}
-                {row.node.date_updated}
-              </p>
+              <ServiceDepartmentRow
+                key={row.node.id}
+                url={`/organization/${row.node.organization}/`}
+                organization={this.getOrganizationDetails(
+                  row.node.organization
+                )}
+                status={row.node[this.props.data.servicesCsv.short_name]}
+                dateUpdated={row.node.date_updated}
+              />
             )
           )}
         </div>
