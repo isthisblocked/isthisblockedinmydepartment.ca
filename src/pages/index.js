@@ -2,8 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 import _ from 'lodash'
 import HomepageRow from '../components/HomepageRow'
+import IntroText from '../components/IntroText'
 
 import Layout from '../components/layout'
+// import styles from '../styles/isthisblocked.scss'
+// import styles from '../styles/sass.module.scss'
 
 class IndexPage extends React.Component {
   getOrganizationStatus = (acronym_en, field) => {
@@ -21,7 +24,9 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <h1>All Departments</h1>
+        <IntroText />
+
+        <h1>Departmental comparison</h1>
         {this.props.data.allOrganizationsCsv.edges.map((row, i) => (
           <HomepageRow
             key={row.node.id}

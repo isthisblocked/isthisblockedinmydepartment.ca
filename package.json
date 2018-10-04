@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "author": "Sean Boots <sean.boots@gmail.com>",
   "dependencies": {
+    "classnames": "^2.2.6",
     "gatsby": "^2.0.12",
     "gatsby-plugin-manifest": "^2.0.4",
     "gatsby-plugin-offline": "^2.0.5",
@@ -16,6 +17,7 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
+    "sanitize.css": "^7.0.3",
     "slash": "^2.0.0"
   },
   "keywords": [
