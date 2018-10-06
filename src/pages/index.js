@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import _ from 'lodash'
 import HomepageRow from '../components/HomepageRow'
 import IntroText from '../components/IntroText'
@@ -9,6 +9,23 @@ import Layout from '../components/layout'
 // import styles from '../styles/sass.module.scss'
 
 class IndexPage extends React.Component {
+  state = {
+    descriptionVisible: false,
+  }
+
+  toggleDescription = event => {
+    event.preventDefault()
+    if (this.state.descriptionVisible) {
+      this.setState({
+        descriptionVisible: false,
+      })
+    } else {
+      this.setState({
+        descriptionVisible: true,
+      })
+    }
+  }
+
   getOrganizationStatus = (acronym_en, field) => {
     const nodes = _.map(
       this.props.data.allOrganizationStatusRandomCsv.edges,
@@ -24,7 +41,10 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <IntroText />
+        <IntroText
+          descriptionVisible={this.state.descriptionVisible}
+          toggleDescription={this.toggleDescription}
+        />
 
         <h1>Departmental comparison</h1>
         {this.props.data.allOrganizationsCsv.edges.map((row, i) => (
