@@ -22,18 +22,17 @@ class Service extends React.Component {
         <div>
           <h1>{this.props.data.servicesCsv.name}</h1>
           <p>
-            <em>
-              {this.props.data.servicesCsv.description}{' '}
-              <a
-                href={this.props.data.servicesCsv.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit website
-              </a>
-            </em>
+            {this.props.data.servicesCsv.description}{' '}
+            <a
+              href={this.props.data.servicesCsv.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit website
+            </a>
           </p>
 
+          <h2>Department status</h2>
           {this.props.data.allOrganizationStatusRandomCsv.edges.map(
             (row, i) => (
               <ServiceDepartmentRow

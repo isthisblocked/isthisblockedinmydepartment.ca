@@ -107,46 +107,41 @@ body {
   }
 }
 
-.homepageRow {
+.homepageRow, .serviceDepartmentRow, .departmentServiceRow {
   margin: 0 0 2rem;
-  // min-height: 30px;
-  div.departmentName {
-    width: 340px;
-    float: left;
-    padding-right: 1.5rem;
-  }
-  div.departmentScore {
-    width: 125px;
-    float:left;
-    padding-right: 1.5rem;
-
-  }
-  div.departmentDateUpdated {
-    width: 250px;
-    float: left;
-  }
   clear: both;
+}
+
+div.departmentName {
+  width: 340px;
+  float: left;
+  padding-right: 1.5rem;
+}
+div.departmentScore {
+  width: 125px;
+  float:left;
+  padding-right: 1.5rem;
+
+}
+div.departmentDateUpdated {
+  width: 250px;
+  float: left;
 }
 
 span.departmentScoreNumber {
   font-weight: bold;
 }
 
-.departmentServiceRow {
-  margin: 0 0 2rem;
-  div.serviceName {
-    width: 200px;
-    float: left;
-    padding-right: 1.5rem;
-  }
-  div.serviceStatus {
-    width: 125px;
-    float:left;
-    padding-right: 1.5rem;
+div.serviceName {
+  width: 200px;
+  float: left;
+  padding-right: 1.5rem;
+}
+div.serviceStatus {
+  width: 125px;
+  float:left;
+  padding-right: 1.5rem;
 
-  }
-
-  clear: both;
 }
 
 // Thanks to
