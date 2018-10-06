@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import _ from 'lodash'
+import styles from '../styles/sass.module.scss'
 import DepartmentServiceRow from '../components/DepartmentServiceRow'
 
 class Organization extends React.Component {
@@ -41,7 +42,12 @@ class Organization extends React.Component {
               Visit website
             </a>
           </p>
-          <p>Score: {this.props.data.organizationStatusRandomCsv.score}</p>
+          <p>
+            Score:
+            <span className={styles.departmentScoreNumber}>
+              {this.props.data.organizationStatusRandomCsv.score}
+            </span>
+          </p>
           <p>
             Last updated:{' '}
             {this.props.data.organizationStatusRandomCsv.date_updated}

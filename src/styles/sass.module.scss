@@ -110,18 +110,32 @@ body {
 .homepageRow {
   margin: 0 0 2rem;
   // min-height: 30px;
-  div:nth-child(1) {
-    width: 320px;
+  div.departmentName {
+    width: 340px;
     float: left;
+    padding-right: 1.5rem;
   }
-  div:nth-child(2) {
-    width: 110px;
+  div.departmentScore {
+    width: 125px;
     float:left;
+    padding-right: 1.5rem;
 
   }
-  div:nth-child(3) {
-    width: 150px;
+  div.departmentDateUpdated {
+    width: 250px;
     float: left;
   }
+  clear: both;
+}
+
+span.departmentScoreNumber {
+  font-weight: bold;
+}
+
+// Thanks to
+// https://css-tricks.com/snippets/css/clear-fix/
+.clearfix:after {
+  content: "";
+  display: table;
   clear: both;
 }
