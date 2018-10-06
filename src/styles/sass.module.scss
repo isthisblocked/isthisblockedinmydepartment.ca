@@ -132,6 +132,23 @@ span.departmentScoreNumber {
   font-weight: bold;
 }
 
+.departmentServiceRow {
+  margin: 0 0 2rem;
+  div.serviceName {
+    width: 200px;
+    float: left;
+    padding-right: 1.5rem;
+  }
+  div.serviceStatus {
+    width: 125px;
+    float:left;
+    padding-right: 1.5rem;
+
+  }
+
+  clear: both;
+}
+
 // Thanks to
 // https://css-tricks.com/snippets/css/clear-fix/
 .clearfix:after {

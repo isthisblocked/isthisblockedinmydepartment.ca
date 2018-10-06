@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import cx from 'classnames'
+import styles from '../styles/sass.module.scss'
 
 class DepartmentServiceRow extends React.Component {
   //   <p key={item}>
@@ -13,13 +15,17 @@ class DepartmentServiceRow extends React.Component {
   // </p>
 
   render() {
+    // console.log('row')
+    // console.log(this.props.serviceDetails)
     const { name, description } = this.props.serviceDetails
     return (
-      <div className="departmentServiceRow">
-        <Link to={this.props.url} title={description}>
-          {name}
-        </Link>{' '}
-        is {this.props.status}
+      <div className={cx(styles.departmentServiceRow, styles.clearfix)}>
+        <div className={styles.serviceName}>
+          <Link to={this.props.url} title={description}>
+            {name}
+          </Link>
+        </div>
+        <div className={styles.serviceStatus}>{this.props.status}</div>
       </div>
     )
   }

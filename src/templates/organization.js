@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import _ from 'lodash'
 import styles from '../styles/sass.module.scss'
-import DepartmentServiceRow from '../components/DepartmentServiceRow'
+import DepartmentServiceCollection from '../components/DepartmentServiceCollection'
 
 class Organization extends React.Component {
   getServiceDetails = (short_name, field) => {
@@ -13,6 +13,9 @@ class Organization extends React.Component {
     } else {
       return _.get(_.find(nodes, { short_name: short_name }), field)
     }
+  }
+  getServiceStatus = item => {
+    return this.props.data.organizationStatusRandomCsv[item]
   }
 
   render() {
@@ -41,24 +44,22 @@ class Organization extends React.Component {
             >
               Visit website
             </a>
-          </p>
-          <p>
-            Score:
+            &nbsp;&nbsp; Score:
             <span className={styles.departmentScoreNumber}>
               {this.props.data.organizationStatusRandomCsv.score}
             </span>
-          </p>
-          <p>
-            Last updated:{' '}
+            &nbsp;&nbsp; Last updated:{' '}
             {this.props.data.organizationStatusRandomCsv.date_updated}
           </p>
 
-          {services.map((item, i) => (
-            <DepartmentServiceRow
-              key={item}
-              url={`/service/${item}/`}
-              serviceDetails={this.getServiceDetails(item)}
-              status={this.props.data.organizationStatusRandomCsv[item]}
+          {this.props.data.allServiceCategoriesCsv.edges.map((row, i) => (
+            <DepartmentServiceCollection
+              key={row.node.id}
+              services={services}
+              filter={row.node.name}
+              description={row.node.description}
+              getServiceDetails={this.getServiceDetails}
+              getServiceStatus={this.getServiceStatus}
             />
           ))}
         </div>
@@ -128,6 +129,15 @@ export const organizationQuery = graphql`
       webex
       youtube
       zotero
+    }
+    allServiceCategoriesCsv {
+      edges {
+        node {
+          id
+          name
+          description
+        }
+      }
     }
   }
 `
