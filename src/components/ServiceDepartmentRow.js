@@ -10,6 +10,9 @@ class ServiceDepartmentRow extends React.Component {
         <div className={styles.departmentName}>
           <Link to={this.props.url}>{this.props.organization_name}</Link>
         </div>
+        <div className={styles.serviceStatusIndicator}>
+          <span className={styles[this.props.status]}>&nbsp;</span>
+        </div>
         <div className={styles.serviceStatus}>{this.props.status}</div>
         <div className={styles.departmentDateUpdated}>
           Updated: {this.props.dateUpdated}

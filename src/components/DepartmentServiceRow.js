@@ -25,6 +25,9 @@ class DepartmentServiceRow extends React.Component {
             {name}
           </Link>
         </div>
+        <div className={styles.serviceStatusIndicator}>
+          <span className={styles[this.props.status]}>&nbsp;</span>
+        </div>
         <div className={styles.serviceStatus}>{this.props.status}</div>
       </div>
     )

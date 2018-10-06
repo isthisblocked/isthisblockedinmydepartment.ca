@@ -44,7 +44,7 @@ class Organization extends React.Component {
             >
               Visit website
             </a>
-            &nbsp;&nbsp; Score:
+            &nbsp;&nbsp; Score:{' '}
             <span className={styles.departmentScoreNumber}>
               {this.props.data.organizationStatusRandomCsv.score}
             </span>

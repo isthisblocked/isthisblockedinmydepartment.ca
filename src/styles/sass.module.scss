@@ -27,13 +27,15 @@ $colors: (
   danger: (
     1: hsl( 30, 80%, 95%),
     2: hsl( 28, 60%, 84%),
-    3: hsl( 30, 99%, 60%),
+    // 3: hsl( 30, 99%, 60%),
+    3: hsl( 0, 90%, 45%),
     4: hsl(  0, 80%, 30%),
     5: hsl(  0, 60%, 25%),
   ),
   success: (
     1: hsl(110, 50%, 95%),
-    2: hsl(110, 60%, 90%),
+    // 2: hsl(110, 60%, 90%),
+    2: hsl(110, 60%, 85%),
     3: hsl(110, 99%, 50%),
     4: hsl(100, 80%, 30%),
     5: hsl( 90, 60%, 20%),
@@ -58,6 +60,18 @@ $pageAccent: map-get(map-get($colors,main), 3);
 $bodyText: map-get(map-get($colors,main), 5);
 $textWidth: 640px;
 
+// Status boxes
+$unknown: map-get(map-get($colors,main), 2);
+$unknownBorder: map-get(map-get($colors,main), 3);
+
+$blocked: map-get(map-get($colors,danger), 3);
+$blockedBorder: map-get(map-get($colors,danger), 4);
+
+$restricted: map-get(map-get($colors,warn), 3);
+$restrictedBorder: map-get(map-get($colors,warn), 4);
+
+$open: map-get(map-get($colors,success), 2);
+$openBorder: map-get(map-get($colors,success), 4);
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -137,11 +151,42 @@ div.serviceName {
   float: left;
   padding-right: 1.5rem;
 }
+
 div.serviceStatus {
   width: 125px;
   float:left;
   padding-right: 1.5rem;
 
+  text-transform: capitalize;
+}
+
+div.serviceStatusIndicator {
+  float:left;
+  width: 38px;
+
+  span {
+    display: block;
+    height: 28px;
+    width: 28px;
+    border: 2px solid grey;
+    margin-top: -1px;
+  }
+  span.unknown {
+    background-color: $unknown;
+    border-color: $unknownBorder;
+  }
+  span.blocked {
+    background-color: $blocked;
+    border-color: $blockedBorder;
+  }
+  span.restricted {
+    background-color: $restricted;
+    border-color: $restrictedBorder;
+  }
+  span.open {
+    background-color: $open;
+    border-color: $openBorder;
+  }
 }
 
 // Thanks to
