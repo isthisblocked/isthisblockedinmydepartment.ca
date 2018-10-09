@@ -16,10 +16,36 @@ class IntroText extends React.Component {
         {this.props.descriptionVisible && (
           <>
             <p>
-              The 2014 Policy on Acceptable Network and Device Use (PANDU)
-              states that, …. In June, the federal Treasury Board released an IT
-              Policy Implementation Notice re-iterating the importance of
-              providing access to these tools, saying….
+              The 2014{' '}
+              <a
+                href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=27122#cha5"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Policy on Acceptable Network and Device Use
+              </a>{' '}
+              (PANDU) states that public servants should have “open access to
+              the Internet including Government of Canada and external Web 2.0
+              tools and services”, to support enhanced communication and
+              collaboration, and to improve productivity and program and service
+              delivery.
+            </p>
+            <p>
+              In June 2018, the federal Treasury Board{' '}
+              <a
+                href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32588#cha5"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                released an IT Policy Implementation Notice
+              </a>{' '}
+              re-iterating the importance of providing access to these tools,
+              saying that “open access to modern tools is essential to
+              transforming how public servants work and serve Canadians”. It
+              instructs departments to reconfigure their web filtering rules to
+              be open by default to the Internet, aside from limited exceptions
+              (websites that support criminal behaviour or other activities that
+              violate government policies or operations).
             </p>
 
             <p>
@@ -38,17 +64,27 @@ class IntroText extends React.Component {
             </p>
 
             <p>
-              This site is an Ottawa Civic Tech volunteer project. It is not
-              affiliated with the Government of Canada.
+              This site is an{' '}
+              <a
+                href="http://ottawacivictech.ca/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ottawa Civic Tech
+              </a>{' '}
+              volunteer project. It is not affiliated with the Government of
+              Canada.
             </p>
           </>
         )}
 
-        <p>
-          <a href="#" onClick={this.props.toggleDescription}>
-            {this.props.descriptionVisible ? 'Read less' : 'Read more'}
-          </a>
-        </p>
+        {this.props.hideToggle != true && (
+          <p>
+            <a href="#" onClick={this.props.toggleDescription}>
+              {this.props.descriptionVisible ? 'Read less' : 'Read more'}
+            </a>
+          </p>
+        )}
       </div>
     )
   }

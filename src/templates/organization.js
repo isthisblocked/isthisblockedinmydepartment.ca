@@ -36,21 +36,27 @@ class Organization extends React.Component {
       <Layout pageTitle={organization.name_en}>
         <div>
           <h1>{organization.name_en}</h1>
-          <p>
-            <a
-              href={organization.url_en}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit website
-            </a>
-            &nbsp;&nbsp; Score:{' '}
-            <span className={styles.departmentScoreNumber}>
-              {this.props.data.organizationStatusRandomCsv.score}
-            </span>
-            &nbsp;&nbsp; Last updated:{' '}
-            {this.props.data.organizationStatusRandomCsv.date_updated}
-          </p>
+          <ul className={styles.listInline}>
+            <li className={styles.listInlineItem}>
+              <a
+                href={organization.url_en}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit website
+              </a>
+            </li>
+            <li className={styles.listInlineItem}>
+              Score:{' '}
+              <span className={styles.departmentScoreNumber}>
+                {this.props.data.organizationStatusRandomCsv.score}
+              </span>
+            </li>
+            <li className={styles.listInlineItem}>
+              Last updated:{' '}
+              {this.props.data.organizationStatusRandomCsv.date_updated}
+            </li>
+          </ul>
 
           {this.props.data.allServiceCategoriesCsv.edges.map((row, i) => (
             <DepartmentServiceCollection

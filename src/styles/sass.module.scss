@@ -115,6 +115,12 @@ body {
   
 }
 
+.footerContainer {
+  border-top: $pageAccent 1px solid;
+  margin-top: 2.5375rem;
+  padding-top: 1.45rem;
+}
+
 .introText {
   p {
     max-width: $textWidth;
@@ -195,4 +201,25 @@ div.serviceStatusIndicator {
   content: "";
   display: table;
   clear: both;
+}
+
+
+// Adapted from
+// https://getbootstrap.com/docs/4.1/content/typography/
+.listInline, .listUnstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.listInlineItem {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 1em;
+  }
+}
+
+.listStandard {
+  li:not(:last-child) {
+    margin-bottom: 1em;
+  }
 }
