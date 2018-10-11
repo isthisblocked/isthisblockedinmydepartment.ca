@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import _ from 'lodash'
+import styles from '../styles/sass.module.scss'
 import ServiceDepartmentRow from '../components/ServiceDepartmentRow'
 
 class Service extends React.Component {
@@ -21,7 +22,7 @@ class Service extends React.Component {
       <Layout pageTitle={this.props.data.servicesCsv.name}>
         <div>
           <h1>{this.props.data.servicesCsv.name}</h1>
-          <p>
+          <p className={styles.textLimit}>
             {this.props.data.servicesCsv.description}{' '}
             <a
               href={this.props.data.servicesCsv.url}

@@ -110,9 +110,25 @@ body {
     padding: 1.0875rem 0px ;
     
     font-size: 58px;
-    max-width: $textWidth;
+    max-width: $textWidth - 100px;
   }
   
+}
+
+@media screen and (max-width: 600px) {
+  .headerContainer {
+    h1 {
+      font-size: 44px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headerContainer {
+    h1 {
+      font-size: 42px;
+    }
+  }
 }
 
 .footerContainer {
