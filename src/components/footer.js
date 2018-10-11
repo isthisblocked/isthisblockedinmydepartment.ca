@@ -15,6 +15,15 @@ const Footer = () => (
         <li className={styles.listInlineItem}>
           <Link to="/about">About this project</Link>
         </li>
+        <li className={styles.listInlineItem}>
+          <a
+            href="https://github.com/isthisblocked/isthisblockedinmydepartment.ca"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on GitHub
+          </a>
+        </li>
       </ul>
     </div>
   </div>
