@@ -21,25 +21,57 @@ const SuggestPage = () => (
       </p>
       <ul className={styles.listStandard}>
         <li>
-          <b>Department-wide updates</b>
+          <b>
+            <a
+              href="http://bit.ly/isthisblocked-updates"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Department-wide updates
+            </a>
+          </b>
           <br />
           To suggest changes for more than one service within a specific
           department
         </li>
         <li>
-          <b>Specific service updates</b>
+          <b>
+            <a
+              href="http://bit.ly/isthisblocked-individual"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Specific service updates
+            </a>
+          </b>
           <br />
           To quickly suggest changes for an individual service within a
           department
         </li>
         <li>
-          <b>Add a new service</b>
+          <b>
+            <a
+              href="http://bit.ly/isthisblocked-add-service"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Add a new service
+            </a>
+          </b>
           <br />
           To suggest a new online service (collaboration tools, messaging
           platforms, etc.) to add to the dataset
         </li>
         <li>
-          <b>Add a new department</b>
+          <b>
+            <a
+              href="http://bit.ly/isthisblocked-add-organization"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Add a new department
+            </a>
+          </b>
           <br />
           To suggest a federal department or agency to add to the dataset
         </li>
