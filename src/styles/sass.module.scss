@@ -99,14 +99,15 @@ body {
   border-bottom: $pageAccent 1px solid;
   margin-bottom: 2.5375rem;
 
-  h1 a {
+  .headerTitle a {
     text-decoration: none;
+    font-weight: bold;
     color: $bodyText;
     &:hover, &:active {
       text-decoration: underline
     }
   }
-  h1 {
+  .headerTitle {
     padding: 1.0875rem 0px ;
     
     font-size: 58px;
@@ -117,7 +118,7 @@ body {
 
 @media screen and (max-width: 600px) {
   .headerContainer {
-    h1 {
+    .headerTitle {
       font-size: 44px;
     }
   }
@@ -125,7 +126,7 @@ body {
 
 @media screen and (max-width: 500px) {
   .headerContainer {
-    h1 {
+    .headerTitle {
       font-size: 42px;
     }
   }
