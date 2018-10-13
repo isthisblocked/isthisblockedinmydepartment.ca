@@ -2,6 +2,8 @@ import React from 'react'
 // import { Link } from 'gatsby'
 import _ from 'lodash'
 import HomepageRow from '../components/HomepageRow'
+import HomepageRowCollection from '../components/HomepageRowCollection'
+import SortLinks from '../components/SortLinks'
 import IntroText from '../components/IntroText'
 
 import Layout from '../components/layout'
@@ -11,6 +13,88 @@ import Layout from '../components/layout'
 class IndexPage extends React.Component {
   state = {
     descriptionVisible: false,
+    sortBy: 'score',
+    sortDirection: 'desc',
+    homepageRows: {},
+    sortedHomepageRows: [],
+  }
+
+  homepageRows = {}
+
+  componentDidMount() {
+    let sortedHomepageRows = []
+    let homepageRows = {}
+
+    // console.log(this.props.data.allOrganizationStatusRandomCsv.edges)
+
+    // Create indexed object for each organization in the status table
+    _.each(this.props.data.allOrganizationStatusRandomCsv.edges, function(
+      edge
+    ) {
+      // Set the score value for the row to be an integer, not a string
+      if (_.isUndefined(edge.node.score) === false) {
+        edge.node.score = _.toInteger(edge.node.score)
+      }
+      homepageRows[edge.node.organization] = edge.node
+    })
+
+    // Bring in the organization name from the organizations CSV table, matched with the index key (organization acronym)
+    _.each(this.props.data.allOrganizationsCsv.edges, function(edge) {
+      // console.log(edge.node)
+      if (_.isObject(homepageRows[edge.node.acronym_en])) {
+        homepageRows[edge.node.acronym_en].name_en = edge.node.name_en
+      }
+    })
+
+    // sortedHomepageRows = _.sortBy(_.values(homepageRows), [
+    //   function(o) {
+    //     return o.score
+    //   },
+    // ])
+
+    sortedHomepageRows = this.sortRowArray(
+      homepageRows,
+      this.state.sortBy,
+      this.state.sortDirection
+    )
+
+    this.setState({
+      homepageRows: homepageRows,
+      sortedHomepageRows: sortedHomepageRows,
+    })
+
+    // console.log(homepageRows)
+    // console.log('sorted')
+    // console.log(sortedHomepageRows)
+  }
+
+  sortRowArray = (homepageRows, sortBy, sortDirection) => {
+    let sortedHomepageRows = []
+
+    sortedHomepageRows = _.sortBy(_.values(homepageRows), [
+      function(o) {
+        return o[sortBy]
+      },
+    ])
+
+    if (sortDirection === 'desc') {
+      _.reverse(sortedHomepageRows)
+    }
+
+    return sortedHomepageRows
+  }
+
+  sortRows = (sortBy, sortDirection) => {
+    const sortedHomepageRows = this.sortRowArray(
+      this.state.homepageRows,
+      sortBy,
+      sortDirection
+    )
+    this.setState({
+      sortedHomepageRows: sortedHomepageRows,
+      sortBy: sortBy,
+      sortDirection: sortDirection,
+    })
   }
 
   toggleDescription = event => {
@@ -26,18 +110,6 @@ class IndexPage extends React.Component {
     }
   }
 
-  getOrganizationStatus = (acronym_en, field) => {
-    const nodes = _.map(
-      this.props.data.allOrganizationStatusRandomCsv.edges,
-      'node'
-    )
-    if (_.isUndefined(field)) {
-      return _.find(nodes, { organization: acronym_en })
-    } else {
-      return _.get(_.find(nodes, { organization: acronym_en }), field)
-    }
-  }
-
   render() {
     return (
       <Layout>
@@ -47,21 +119,16 @@ class IndexPage extends React.Component {
         />
 
         <h1>Departmental comparison</h1>
-        {this.props.data.allOrganizationsCsv.edges.map((row, i) => (
-          <HomepageRow
-            key={row.node.id}
-            url={`/organization/${row.node.acronym_en}/`}
-            organizationName={row.node.name_en}
-            score={`${this.getOrganizationStatus(
-              row.node.acronym_en,
-              'score'
-            )}`}
-            dateUpdated={`${this.getOrganizationStatus(
-              row.node.acronym_en,
-              'date_updated'
-            )}`}
-          />
-        ))}
+
+        <SortLinks
+          sortBy={this.state.sortBy}
+          sortDirection={this.state.sortDirection}
+          sortRows={this.sortRows}
+        />
+
+        <HomepageRowCollection
+          sortedHomepageRows={this.state.sortedHomepageRows}
+        />
       </Layout>
     )
   }

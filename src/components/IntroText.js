@@ -78,7 +78,7 @@ class IntroText extends React.Component {
           </>
         )}
 
-        {this.props.hideToggle != true && (
+        {this.props.hideToggle !== true && (
           <p>
             <a href="#" onClick={this.props.toggleDescription}>
               {this.props.descriptionVisible ? 'Read less' : 'Read more'}
