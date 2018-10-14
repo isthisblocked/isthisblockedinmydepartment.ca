@@ -240,3 +240,24 @@ div.serviceStatusIndicator {
     margin-bottom: 1em;
   }
 }
+
+// Sort links
+
+h1.comparisonTitle {
+  margin-bottom: 0.35em;
+}
+
+.sortLinks {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  // border-bottom: $pageAccent 1px solid;
+
+  margin-top: 0;
+}
+.activeSortLink {
+  a {
+    text-decoration: none;
+    color: $bodyText;
+  }
+  // font-weight: bold;
+}

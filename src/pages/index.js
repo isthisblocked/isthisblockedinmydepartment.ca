@@ -3,8 +3,9 @@ import React from 'react'
 import _ from 'lodash'
 import HomepageRow from '../components/HomepageRow'
 import HomepageRowCollection from '../components/HomepageRowCollection'
-import SortLinks from '../components/SortLinks'
+import SortLinkCollection from '../components/SortLinkCollection'
 import IntroText from '../components/IntroText'
+import styles from '../styles/sass.module.scss'
 
 import Layout from '../components/layout'
 // import styles from '../styles/isthisblocked.scss'
@@ -15,17 +16,17 @@ class IndexPage extends React.Component {
     descriptionVisible: false,
     sortBy: 'score',
     sortDirection: 'desc',
+    sortLinksActiveLabel: 'highest',
     homepageRows: {},
     sortedHomepageRows: [],
   }
 
   homepageRows = {}
 
+  // On component load, merge data from two of the GraphQL CSV queries, and use it to set the initial state
   componentDidMount() {
     let sortedHomepageRows = []
     let homepageRows = {}
-
-    // console.log(this.props.data.allOrganizationStatusRandomCsv.edges)
 
     // Create indexed object for each organization in the status table
     _.each(this.props.data.allOrganizationStatusRandomCsv.edges, function(
@@ -40,17 +41,10 @@ class IndexPage extends React.Component {
 
     // Bring in the organization name from the organizations CSV table, matched with the index key (organization acronym)
     _.each(this.props.data.allOrganizationsCsv.edges, function(edge) {
-      // console.log(edge.node)
       if (_.isObject(homepageRows[edge.node.acronym_en])) {
         homepageRows[edge.node.acronym_en].name_en = edge.node.name_en
       }
     })
-
-    // sortedHomepageRows = _.sortBy(_.values(homepageRows), [
-    //   function(o) {
-    //     return o.score
-    //   },
-    // ])
 
     sortedHomepageRows = this.sortRowArray(
       homepageRows,
@@ -62,10 +56,6 @@ class IndexPage extends React.Component {
       homepageRows: homepageRows,
       sortedHomepageRows: sortedHomepageRows,
     })
-
-    // console.log(homepageRows)
-    // console.log('sorted')
-    // console.log(sortedHomepageRows)
   }
 
   sortRowArray = (homepageRows, sortBy, sortDirection) => {
@@ -84,6 +74,8 @@ class IndexPage extends React.Component {
     return sortedHomepageRows
   }
 
+  // Helper function to update the sortedHomepageRows array based on input parameters
+  // The this.state.homepageRows object does not change after the component is loaded, just the this.state.sortedHomepageRows array.
   sortRows = (sortBy, sortDirection) => {
     const sortedHomepageRows = this.sortRowArray(
       this.state.homepageRows,
@@ -95,6 +87,26 @@ class IndexPage extends React.Component {
       sortBy: sortBy,
       sortDirection: sortDirection,
     })
+  }
+
+  // Handles click events from the sorting links
+  handleSortLink = event => {
+    event.preventDefault()
+    let targetLabel = event.currentTarget.dataset.label
+
+    this.setState({ sortLinksActiveLabel: targetLabel })
+
+    if (targetLabel === 'highest') {
+      this.sortRows('score', 'desc')
+    } else if (targetLabel === 'lowest') {
+      this.sortRows('score', 'asc')
+    } else if (targetLabel === 'name') {
+      this.sortRows('name', 'asc')
+    } else if (targetLabel === 'date_updated') {
+      this.sortRows('date_updated', 'desc')
+    }
+    console.log('clicked!!')
+    console.log(targetLabel)
   }
 
   toggleDescription = event => {
@@ -118,12 +130,13 @@ class IndexPage extends React.Component {
           toggleDescription={this.toggleDescription}
         />
 
-        <h1>Departmental comparison</h1>
+        <h1 class={styles.comparisonTitle}>Departmental comparison</h1>
 
-        <SortLinks
+        <SortLinkCollection
           sortBy={this.state.sortBy}
           sortDirection={this.state.sortDirection}
-          sortRows={this.sortRows}
+          sortLinksActiveLabel={this.state.sortLinksActiveLabel}
+          handleSortLink={this.handleSortLink}
         />
 
         <HomepageRowCollection
