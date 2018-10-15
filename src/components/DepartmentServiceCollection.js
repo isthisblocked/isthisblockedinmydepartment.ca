@@ -11,10 +11,9 @@ class DepartmentServiceCollection extends React.Component {
         <h2>{this.props.description}</h2>
         {this.props.services.map((item, i) => (
           <div key={item}>
-            {this.props.getServiceDetails(item)['category'] ==
+            {this.props.getServiceDetails(item)['category'] ===
               this.props.filter && (
               <DepartmentServiceRow
-                // key={item}
                 url={`/service/${item}/`}
                 serviceDetails={this.props.getServiceDetails(item)}
                 status={this.props.getServiceStatus(item)}

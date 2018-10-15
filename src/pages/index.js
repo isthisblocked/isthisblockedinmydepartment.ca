@@ -22,12 +22,30 @@ class IndexPage extends React.Component {
     showPrelaunchPlaceholder: true,
   }
 
-  homepageRows = {}
-
   // On component load, merge data from two of the GraphQL CSV queries, and use it to set the initial state
   componentDidMount() {
     let sortedHomepageRows = []
     let homepageRows = {}
+    let localState = {}
+    let sortLinksActiveLabel
+    let descriptionVisible
+
+    // Get initial sort state from local storage
+    const localStorageRef = localStorage.getItem('localState')
+    if (localStorageRef) {
+      localState = JSON.parse(localStorageRef)
+    }
+    // If these are set in the local storage object, use those values - otherwise use the defaults in the state object above:
+    sortLinksActiveLabel = _.get(
+      localState,
+      'sortLinksActiveLabel',
+      this.state.sortLinksActiveLabel
+    )
+    descriptionVisible = _.get(
+      localState,
+      'descriptionVisible',
+      this.state.descriptionVisible
+    )
 
     // Create indexed object for each organization in the status table
     _.each(this.props.data.allOrganizationStatusRandomCsv.edges, function(
@@ -47,16 +65,16 @@ class IndexPage extends React.Component {
       }
     })
 
-    sortedHomepageRows = this.sortRowArray(
-      homepageRows,
-      this.state.sortBy,
-      this.state.sortDirection
+    this.setState(
+      {
+        homepageRows: homepageRows,
+        sortLinksActiveLabel: sortLinksActiveLabel,
+        descriptionVisible: descriptionVisible,
+      },
+      () => {
+        this.sortRowsByTargetLabel(sortLinksActiveLabel)
+      }
     )
-
-    this.setState({
-      homepageRows: homepageRows,
-      sortedHomepageRows: sortedHomepageRows,
-    })
   }
 
   sortRowArray = (homepageRows, sortBy, sortDirection) => {
@@ -83,20 +101,30 @@ class IndexPage extends React.Component {
       sortBy,
       sortDirection
     )
-    this.setState({
-      sortedHomepageRows: sortedHomepageRows,
-      sortBy: sortBy,
-      sortDirection: sortDirection,
-    })
+    this.setState(
+      {
+        sortedHomepageRows: sortedHomepageRows,
+        sortBy: sortBy,
+        sortDirection: sortDirection,
+      },
+      () => {
+        this.updateLocalStorage()
+      }
+    )
   }
 
-  // Handles click events from the sorting links
-  handleSortLink = event => {
-    event.preventDefault()
-    let targetLabel = event.currentTarget.dataset.label
+  updateLocalStorage = () => {
+    // Update local storage
+    localStorage.setItem(
+      'localState',
+      JSON.stringify({
+        sortLinksActiveLabel: this.state.sortLinksActiveLabel,
+        descriptionVisible: this.state.descriptionVisible,
+      })
+    )
+  }
 
-    this.setState({ sortLinksActiveLabel: targetLabel })
-
+  sortRowsByTargetLabel = targetLabel => {
     if (targetLabel === 'highest') {
       this.sortRows('score', 'desc')
     } else if (targetLabel === 'lowest') {
@@ -106,21 +134,37 @@ class IndexPage extends React.Component {
     } else if (targetLabel === 'date_updated') {
       this.sortRows('date_updated', 'desc')
     }
-    console.log('clicked!!')
-    console.log(targetLabel)
+  }
+
+  // Handles click events from the sorting links
+  handleSortLink = event => {
+    event.preventDefault()
+    let targetLabel = event.currentTarget.dataset.label
+
+    this.setState({ sortLinksActiveLabel: targetLabel })
+
+    this.sortRowsByTargetLabel(targetLabel)
   }
 
   toggleDescription = event => {
     event.preventDefault()
+    let newDescription
+
     if (this.state.descriptionVisible) {
-      this.setState({
-        descriptionVisible: false,
-      })
+      newDescription = false
     } else {
-      this.setState({
-        descriptionVisible: true,
-      })
+      newDescription = true
     }
+
+    // Update localStorage while we're at it:
+    this.setState(
+      {
+        descriptionVisible: newDescription,
+      },
+      () => {
+        this.updateLocalStorage()
+      }
+    )
   }
 
   render() {
@@ -140,7 +184,7 @@ class IndexPage extends React.Component {
 
         {this.state.showPrelaunchPlaceholder === false && (
           <>
-            <h1 class={styles.comparisonTitle}>Departmental comparison</h1>
+            <h1 className={styles.comparisonTitle}>Departmental comparison</h1>
 
             <SortLinkCollection
               sortBy={this.state.sortBy}
