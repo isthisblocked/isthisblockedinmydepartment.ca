@@ -19,6 +19,7 @@ class IndexPage extends React.Component {
     sortLinksActiveLabel: 'highest',
     homepageRows: {},
     sortedHomepageRows: [],
+    showPrelaunchPlaceholder: true,
   }
 
   homepageRows = {}
@@ -130,18 +131,29 @@ class IndexPage extends React.Component {
           toggleDescription={this.toggleDescription}
         />
 
-        <h1 class={styles.comparisonTitle}>Departmental comparison</h1>
+        {this.state.showPrelaunchPlaceholder && (
+          <>
+            <h1>Launching soon</h1>
+            <p>Stay tuned for updates in the next few weeks…</p>
+          </>
+        )}
 
-        <SortLinkCollection
-          sortBy={this.state.sortBy}
-          sortDirection={this.state.sortDirection}
-          sortLinksActiveLabel={this.state.sortLinksActiveLabel}
-          handleSortLink={this.handleSortLink}
-        />
+        {this.state.showPrelaunchPlaceholder === false && (
+          <>
+            <h1 class={styles.comparisonTitle}>Departmental comparison</h1>
 
-        <HomepageRowCollection
-          sortedHomepageRows={this.state.sortedHomepageRows}
-        />
+            <SortLinkCollection
+              sortBy={this.state.sortBy}
+              sortDirection={this.state.sortDirection}
+              sortLinksActiveLabel={this.state.sortLinksActiveLabel}
+              handleSortLink={this.handleSortLink}
+            />
+
+            <HomepageRowCollection
+              sortedHomepageRows={this.state.sortedHomepageRows}
+            />
+          </>
+        )}
       </Layout>
     )
   }
