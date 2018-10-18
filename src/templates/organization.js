@@ -91,7 +91,7 @@ export const organizationQuery = graphql`
       url_fr
       date_added
     }
-    allServicesCsv {
+    allServicesCsv(filter: { hidden: { ne: "1" } }) {
       edges {
         node {
           name
@@ -99,6 +99,7 @@ export const organizationQuery = graphql`
           short_name
           url
           date_added
+          hidden
           user_submitted
           description
         }
@@ -117,6 +118,7 @@ export const organizationQuery = graphql`
       evernote
       facebook
       fluidsurveys
+      gist
       github
       googlechrome
       googledocs

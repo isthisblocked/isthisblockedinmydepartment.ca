@@ -106,6 +106,7 @@ export const servicesQuery = graphql`
       evernote
       facebook
       fluidsurveys
+      gist
       github
       googlechrome
       googledocs

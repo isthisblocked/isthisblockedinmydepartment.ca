@@ -1,4 +1,5 @@
 import React from 'react'
+import _ from 'lodash'
 // import { Link } from 'gatsby'
 // import cx from 'classnames'
 // import styles from '../styles/sass.module.scss'
@@ -11,7 +12,7 @@ class DepartmentServiceCollection extends React.Component {
         <h2>{this.props.description}</h2>
         {this.props.services.map((item, i) => (
           <div key={item}>
-            {this.props.getServiceDetails(item)['category'] ===
+            {_.get(this.props.getServiceDetails(item), 'category') ===
               this.props.filter && (
               <DepartmentServiceRow
                 url={`/service/${item}/`}
