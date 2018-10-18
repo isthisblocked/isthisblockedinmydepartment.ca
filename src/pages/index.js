@@ -19,7 +19,8 @@ class IndexPage extends React.Component {
     sortLinksActiveLabel: 'highest',
     homepageRows: {},
     sortedHomepageRows: [],
-    showPrelaunchPlaceholder: true,
+    showPrelaunchPlaceholder: false,
+    loadingIndicator: true,
   }
 
   // On component load, merge data from two of the GraphQL CSV queries, and use it to set the initial state
@@ -70,6 +71,7 @@ class IndexPage extends React.Component {
         homepageRows: homepageRows,
         sortLinksActiveLabel: sortLinksActiveLabel,
         descriptionVisible: descriptionVisible,
+        loadingIndicator: false,
       },
       () => {
         this.sortRowsByTargetLabel(sortLinksActiveLabel)
@@ -192,6 +194,12 @@ class IndexPage extends React.Component {
               sortLinksActiveLabel={this.state.sortLinksActiveLabel}
               handleSortLink={this.handleSortLink}
             />
+
+            {this.state.loadingIndicator === true && (
+              <p>
+                <em>Loading…</em>
+              </p>
+            )}
 
             <HomepageRowCollection
               sortedHomepageRows={this.state.sortedHomepageRows}
