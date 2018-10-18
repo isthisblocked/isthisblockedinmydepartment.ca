@@ -15,11 +15,11 @@ class Organization extends React.Component {
     }
   }
   getServiceStatus = item => {
-    return this.props.data.organizationStatusRandomCsv[item]
+    return this.props.data.organizationStatusCsv[item]
   }
 
   render() {
-    const services = Object.keys(this.props.data.organizationStatusRandomCsv)
+    const services = Object.keys(this.props.data.organizationStatusCsv)
     const organization = this.props.data.organizationsCsv
 
     // Remove the "score" and "date_updated" entries from the list of services:
@@ -49,12 +49,11 @@ class Organization extends React.Component {
             <li className={styles.listInlineItem}>
               Score:{' '}
               <span className={styles.departmentScoreNumber}>
-                {this.props.data.organizationStatusRandomCsv.score}
+                {this.props.data.organizationStatusCsv.score}
               </span>
             </li>
             <li className={styles.listInlineItem}>
-              Last updated:{' '}
-              {this.props.data.organizationStatusRandomCsv.date_updated}
+              Last updated: {this.props.data.organizationStatusCsv.date_updated}
             </li>
           </ul>
 
@@ -105,7 +104,7 @@ export const organizationQuery = graphql`
         }
       }
     }
-    organizationStatusRandomCsv(organization: { eq: $acronym }) {
+    organizationStatusCsv(organization: { eq: $acronym }) {
       score
       date_updated
       airtable

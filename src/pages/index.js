@@ -49,7 +49,7 @@ class IndexPage extends React.Component {
     )
 
     // Create indexed object for each organization in the status table
-    _.each(this.props.data.allOrganizationStatusRandomCsv.edges, function(
+    _.each(this.props.data.allOrganizationStatusCsv.edges, function(
       edge
     ) {
       // Set the score value for the row to be an integer, not a string
@@ -229,7 +229,7 @@ export const IndexPageQuery = graphql`
         }
       }
     }
-    allOrganizationStatusRandomCsv {
+    allOrganizationStatusCsv {
       edges {
         node {
           id

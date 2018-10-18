@@ -34,20 +34,18 @@ class Service extends React.Component {
           </p>
 
           <h2>Department status</h2>
-          {this.props.data.allOrganizationStatusRandomCsv.edges.map(
-            (row, i) => (
-              <ServiceDepartmentRow
-                key={row.node.id}
-                url={`/organization/${row.node.organization}/`}
-                organization_name={this.getOrganizationDetails(
-                  row.node.organization,
-                  'name_en'
-                )}
-                status={row.node[this.props.data.servicesCsv.short_name]}
-                dateUpdated={row.node.date_updated}
-              />
-            )
-          )}
+          {this.props.data.allOrganizationStatusCsv.edges.map((row, i) => (
+            <ServiceDepartmentRow
+              key={row.node.id}
+              url={`/organization/${row.node.organization}/`}
+              organization_name={this.getOrganizationDetails(
+                row.node.organization,
+                'name_en'
+              )}
+              status={row.node[this.props.data.servicesCsv.short_name]}
+              dateUpdated={row.node.date_updated}
+            />
+          ))}
         </div>
       </Layout>
     )
@@ -84,14 +82,14 @@ export const servicesQuery = graphql`
         }
       }
     }
-    allOrganizationStatusRandomCsv {
+    allOrganizationStatusCsv {
       edges {
         ...ServicesStatusFragment
       }
     }
   }
 
-  fragment ServicesStatusFragment on OrganizationStatusRandomCsvEdge {
+  fragment ServicesStatusFragment on OrganizationStatusCsvEdge {
     node {
       id
       organization
