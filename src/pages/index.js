@@ -19,7 +19,7 @@ class IndexPage extends React.Component {
     sortLinksActiveLabel: 'highest',
     homepageRows: {},
     sortedHomepageRows: [],
-    showPrelaunchPlaceholder: false,
+    showPrelaunchPlaceholder: true,
     loadingIndicator: true,
   }
 
@@ -49,9 +49,7 @@ class IndexPage extends React.Component {
     )
 
     // Create indexed object for each organization in the status table
-    _.each(this.props.data.allOrganizationStatusCsv.edges, function(
-      edge
-    ) {
+    _.each(this.props.data.allOrganizationStatusCsv.edges, function(edge) {
       // Set the score value for the row to be an integer, not a string
       if (_.isUndefined(edge.node.score) === false) {
         edge.node.score = _.toInteger(edge.node.score)
