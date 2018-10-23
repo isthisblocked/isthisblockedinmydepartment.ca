@@ -7,6 +7,9 @@ const Footer = () => (
     <div className={styles.container}>
       <ul className={styles.listInline}>
         <li className={styles.listInlineItem}>
+          <Link to="/">Home</Link>
+        </li>
+        <li className={styles.listInlineItem}>
           <Link to="/suggest">Suggest an update</Link>
         </li>
         <li className={styles.listInlineItem}>
