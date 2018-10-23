@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import _ from 'lodash'
 import styles from '../styles/sass.module.scss'
 import ServiceDepartmentRow from '../components/ServiceDepartmentRow'

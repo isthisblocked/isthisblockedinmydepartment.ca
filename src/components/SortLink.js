@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import cx from 'classnames'
 import styles from '../styles/sass.module.scss'
 

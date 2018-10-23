@@ -1,7 +1,6 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import _ from 'lodash'
-import HomepageRow from '../components/HomepageRow'
 import HomepageRowCollection from '../components/HomepageRowCollection'
 import SortLinkCollection from '../components/SortLinkCollection'
 import IntroText from '../components/IntroText'
@@ -25,7 +24,6 @@ class IndexPage extends React.Component {
 
   // On component load, merge data from two of the GraphQL CSV queries, and use it to set the initial state
   componentDidMount() {
-    let sortedHomepageRows = []
     let homepageRows = {}
     let localState = {}
     let sortLinksActiveLabel

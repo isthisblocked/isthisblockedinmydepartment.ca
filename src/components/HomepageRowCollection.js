@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import HomepageRow from '../components/HomepageRow'
-import cx from 'classnames'
-import styles from '../styles/sass.module.scss'
+// import cx from 'classnames'
+// import styles from '../styles/sass.module.scss'
 
 class HomepageRowCollection extends React.Component {
   render() {
