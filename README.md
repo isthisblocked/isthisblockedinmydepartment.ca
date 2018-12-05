@@ -4,7 +4,9 @@
 
 _This site is an [Ottawa Civic Tech](http://ottawacivictech.ca/) volunteer project. It is not affiliated with the Government of Canada._
 
-This repository powers <https://isthisblockedinmydepartment.ca/>. It's based on the [Gatsby default starter](https://www.gatsbyjs.org/starters/gatsby-starter-default), which is a static site builder built in [React](https://reactjs.org/).
+This repository powers <https://isthisblockedinmydepartment.ca/>. 
+
+It's based on the [Gatsby default starter](https://www.gatsbyjs.org/starters/gatsby-starter-default), which is a static site builder built in [React](https://reactjs.org/).
 
 Before following the installation steps below, make sure that an up-to-date version of [Node.js](https://nodejs.org/) is installed on your computer. For more details on the development environment, see the [Gatsby introductory tutorial](https://www.gatsbyjs.org/tutorial/part-zero/).
 
@@ -12,11 +14,13 @@ Before following the installation steps below, make sure that an up-to-date vers
 
 Isthisblocked uses the [gatsby-transformer-csv](https://www.gatsbyjs.org/packages/gatsby-transformer-csv/) to parse CSV files that contain data on departments and services.
 
-The source data displayed on the website is in CSV format in the `[/src/data](https://github.com/isthisblocked/isthisblockedinmydepartment.ca/tree/master/src/data)` folder. 
+The source data displayed on the website is in CSV format in the [`/src/data`](https://github.com/isthisblocked/isthisblockedinmydepartment.ca/tree/master/src/data) folder. 
 
 The `organization_status.csv` file is updated with new information on services that are open, restricted, or blocked in each department. 
 
-This data is anonymously crowdsourced from the Google Forms linked at <https://isthisblockedinmydepartment.ca/suggest>. Raw data from this form is manually added to the `organization_status.csv` file. 
+This data is anonymously crowdsourced from the Google Forms linked at <https://isthisblockedinmydepartment.ca/suggest>. 
+
+Raw data from these forms is manually added to the `organization_status.csv` file. 
 
 Scores for each department are calculated using the criteria described on the [Scoring](https://isthisblockedinmydepartment.ca/scoring) page. 
 
@@ -32,16 +36,12 @@ For questions or feedback on this website, email [isthisblockedinmydepartment@gm
 
 1.  **Install the Gatsby CLI.**
 
-    The Gatsby CLI helps you create new sites using Gatsby starters.
-
     ```sh
     # Install the Gatsby CLI globally
     npm install -g gatsby-cli
     ```
 
 2.  **Clone this repository.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
 
     ```sh
     # Clone the repository 
@@ -50,7 +50,7 @@ For questions or feedback on this website, email [isthisblockedinmydepartment@gm
 
 3.  **Install package dependencies.**
 
-    Navigate into your new site’s directory and then install package dependencies.
+    This may take several minutes to install.
 
     ```sh
     cd isthisblocked/
