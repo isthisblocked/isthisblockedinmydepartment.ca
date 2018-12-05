@@ -1,42 +1,67 @@
-<p align="center">
-  <a href="https://next.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's default starter
+  Is this blocked in my department.ca
 </h1>
 
-Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
+_This site is an [Ottawa Civic Tech](http://ottawacivictech.ca/) volunteer project. It is not affiliated with the Government of Canada._
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://next.gatsbyjs.org/docs/gatsby-starters/)._
+This repository powers <https://isthisblockedinmydepartment.ca/>. It's based on the [Gatsby default starter](https://www.gatsbyjs.org/starters/gatsby-starter-default), which is a static site builder built in [React](https://reactjs.org/).
 
-## 🚀 Quick start
+Before following the installation steps below, make sure that an up-to-date version of [Node.js](https://nodejs.org/) is installed on your computer. For more details on the development environment, see the [Gatsby introductory tutorial](https://www.gatsbyjs.org/tutorial/part-zero/).
+
+## How it works
+
+Isthisblocked uses the [gatsby-transformer-csv](https://www.gatsbyjs.org/packages/gatsby-transformer-csv/) to parse CSV files that contain data on departments and services.
+
+The source data displayed on the website is in CSV format in the `[/src/data](https://github.com/isthisblocked/isthisblockedinmydepartment.ca/tree/master/src/data)` folder. 
+
+The `organization_status.csv` file is updated with new information on services that are open, restricted, or blocked in each department. 
+
+This data is anonymously crowdsourced from the Google Forms linked at <https://isthisblockedinmydepartment.ca/suggest>. Raw data from this form is manually added to the `organization_status.csv` file. 
+
+Scores for each department are calculated using the criteria described on the [Scoring](https://isthisblockedinmydepartment.ca/scoring) page. 
+
+Future feature possibilities include:
+
+-   built-in data collection using Firebase or other back-end services
+-   embedded previews of services to quickly review which are blocked
+-   automatic tallying and averaging of crowdsourced data
+
+For questions or feedback on this website, email [isthisblockedinmydepartment@gmail.com](mailto:isthisblockedinmydepartment@gmail.com).
+
+## Local installation
 
 1.  **Install the Gatsby CLI.**
 
-    The Gatsby CLI helps you create new sites using Gatsby starters (like this one!)
+    The Gatsby CLI helps you create new sites using Gatsby starters.
 
     ```sh
-    # install the Gatsby CLI globally
+    # Install the Gatsby CLI globally
     npm install -g gatsby-cli
     ```
 
-2.  **Create a Gatsby site.**
+2.  **Clone this repository.**
 
     Use the Gatsby CLI to create a new site, specifying the default starter.
 
     ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter
+    # Clone the repository 
+    git clone git@github.com:isthisblocked/isthisblockedinmydepartment.ca.git isthisblocked
+    ```
+
+3.  **Install package dependencies.**
+
+    Navigate into your new site’s directory and then install package dependencies.
+
+    ```sh
+    cd isthisblocked/
+    npm install
     ```
 
 3.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Once all packages are installed successfully, start it up!
 
     ```sh
-    cd my-default-starter/
     gatsby develop
     ```
 
@@ -46,61 +71,5 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     
     *Note: You'll also see a second link: `http://localhost:8000___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://next.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
     
-    Open the the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the the `isthisblocked` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
     
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── yarn.lock
-
-  1.  **`/node_modules`**: The directory where all of the modules of code that your project depends on (npm packages) are automatically installed.  
-  
-  2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser), like your site header, or a page template. “Src” is a convention for “source code”.
-  
-  3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-  
-  4.  **`.prettierrc`**: This is a configuration file for a tool called [Prettier](https://prettier.io/), which is a tool to help keep the formatting of your code consistent.
-  
-  5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://next.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-  
-  6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://next.gatsbyjs.org/docs/gatsby-config/) for more detail).
-  
-  7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](https://next.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-  
-  8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://next.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-  
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-  
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. (You won’t change this file directly).
-  
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-  
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://next.gatsbyjs.org/). Here are some places to start:
-
--   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://next.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
--   **To dive straight into code samples head [to our documentation](https://next.gatsbyjs.org/docs/).** In particular, check out the “Guides”, API reference, and “Advanced Tutorials” sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
