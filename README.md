@@ -1,8 +1,8 @@
+_This site is an [Ottawa Civic Tech](http://ottawacivictech.ca/) volunteer project. It is not affiliated with the Government of Canada._
+
 <h1 align="center">
   Is this blocked in my department.ca
 </h1>
-
-_This site is an [Ottawa Civic Tech](http://ottawacivictech.ca/) volunteer project. It is not affiliated with the Government of Canada._
 
 This repository powers <https://isthisblockedinmydepartment.ca/>. 
 
