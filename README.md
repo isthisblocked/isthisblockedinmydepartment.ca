@@ -77,7 +77,9 @@ For questions or feedback on this website, email [isthisblockedinmydepartment@gm
     
 5.  **Deployment via GitHub Pages**
 
-    This site is hosted by GitHub Pages, and uses the [gh-pages](https://github.com/tschaub/gh-pages) package for deployments. The Gatsby documentation includes [detailed steps for using Gatsby with GitHub Pages](https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/). If you fork this repository and use it with a different domain name, change the CNAME file in the [`static`](https://github.com/isthisblocked/isthisblockedinmydepartment.ca/tree/master/static) folder, and enable GitHub Pages in your repository settings to match the domain name you specify, and to use the `gh-pages` branch. 
+    This site is hosted by GitHub Pages, and uses the [gh-pages](https://github.com/tschaub/gh-pages) package for deployments. The Gatsby documentation includes [detailed steps for using Gatsby with GitHub Pages](https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/). 
+    
+    If you fork this repository and use it with a different domain name, change the CNAME file in the [`static`](https://github.com/isthisblocked/isthisblockedinmydepartment.ca/tree/master/static) folder, and enable GitHub Pages in your repository settings to match the domain name you specify, and to use the `gh-pages` branch. 
 
     To deploy new updates to the [live version](https://isthisblockedinmydepartment.ca/), run: 
     ```sh
