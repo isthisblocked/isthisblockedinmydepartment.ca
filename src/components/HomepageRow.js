@@ -11,8 +11,8 @@ class HomepageRow extends React.Component {
           <Link to={this.props.url}>{this.props.organizationName}</Link>
         </div>
         <div className={styles.departmentScore}>
-          {this.props.score == 0 && <em>No data</em>}
-          {this.props.score != 0 && (
+          {this.props.score === 0 && <em>No data</em>}
+          {this.props.score !== 0 && (
             <>
               Score:{' '}
               <span className={styles.departmentScoreNumber}>
