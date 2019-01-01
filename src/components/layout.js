@@ -32,7 +32,7 @@ const Layout = ({ children, pageTitle }) => (
             {
               name: 'description',
               content:
-                'An unofficial dashboard of online services blocked by federal government departments in Canada',
+                'An unofficial dashboard of which online services are available or blocked by federal government departments in Canada.',
             },
             {
               name: 'keywords',
