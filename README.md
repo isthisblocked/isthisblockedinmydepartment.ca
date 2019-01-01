@@ -4,15 +4,17 @@ _This site is an [Ottawa Civic Tech](http://ottawacivictech.ca/) volunteer proje
   Is this blocked in my department.ca
 </h1>
 
-This repository powers <https://isthisblockedinmydepartment.ca/>. 
+This repository powers [isthisblockedinmydepartment.ca](https://isthisblockedinmydepartment.ca/). 
 
-It's based on [Gatsby](https://www.gatsbyjs.org), a fast, high-performance static site builder built with [React](https://reactjs.org/). This site uses the [Gatsby default starter](https://www.gatsbyjs.org/starters/gatsby-starter-default).
+It's based on [Gatsby](https://www.gatsbyjs.org), a fast, high-performance static site builder built with [React](https://reactjs.org/). 
+
+This site uses the [Gatsby default starter](https://www.gatsbyjs.org/starters/gatsby-starter-default).
 
 Before following the installation steps below, make sure that an up-to-date version of [Node.js](https://nodejs.org/) is installed on your computer. For more details on the development environment, see the [Gatsby introductory tutorial](https://www.gatsbyjs.org/tutorial/part-zero/).
 
 ## How it works
 
-Isthisblocked uses the [gatsby-transformer-csv](https://www.gatsbyjs.org/packages/gatsby-transformer-csv/) to parse CSV files that contain data on departments and services.
+Isthisblocked uses the [gatsby-transformer-csv](https://www.gatsbyjs.org/packages/gatsby-transformer-csv/) plugin to parse CSV files that contain data on departments and services.
 
 The source data displayed on the website is in CSV format in the [`/src/data`](https://github.com/isthisblocked/isthisblockedinmydepartment.ca/tree/master/src/data) folder. 
 
@@ -75,7 +77,7 @@ For questions or feedback on this website, email [isthisblockedinmydepartment@gm
     
 5.  **Deployment via GitHub Pages**
 
-    This site is hosted by GitHub Pages, and uses the [gh-pages](https://github.com/tschaub/gh-pages) package for deployments. The Gatsby documentation includes [detailed steps for using Gatsby with GitHub Pages](https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/). If you fork this repository and use it with a different domain name, change the [CNAME file](https://github.com/isthisblocked/isthisblockedinmydepartment.ca/blob/master/static/CNAME) in the `static` folder, and enable GitHub Pages in your repository settings to match the domain name you specify, and to use the `gh-pages` branch. 
+    This site is hosted by GitHub Pages, and uses the [gh-pages](https://github.com/tschaub/gh-pages) package for deployments. The Gatsby documentation includes [detailed steps for using Gatsby with GitHub Pages](https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/). If you fork this repository and use it with a different domain name, change the CNAME file in the [`static`](https://github.com/isthisblocked/isthisblockedinmydepartment.ca/tree/master/static) folder, and enable GitHub Pages in your repository settings to match the domain name you specify, and to use the `gh-pages` branch. 
 
     To deploy new updates to the live version, run: 
     ```sh
