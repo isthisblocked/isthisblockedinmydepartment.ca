@@ -27,11 +27,11 @@ class Organization extends React.Component {
     delete services[0]
     delete services[1]
 
-    console.log('department!')
-    console.log(services)
+    // console.log('department!')
+    // console.log(services)
 
-    console.log('services!')
-    console.log(this.props.data.allServicesCsv)
+    // console.log('services!')
+    // console.log(this.props.data.allServicesCsv)
 
     return (
       <Layout pageTitle={organization.name_en}>
