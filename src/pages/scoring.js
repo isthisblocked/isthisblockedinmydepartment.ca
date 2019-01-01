@@ -37,9 +37,6 @@ const ScoringPage = () => (
         anonymous and help to improve the quality of the underlying dataset over
         time.
       </p>
-      <p>
-        <Link to="/">Back to the homepage</Link>
-      </p>
     </div>
   </Layout>
 )

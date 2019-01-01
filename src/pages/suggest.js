@@ -76,9 +76,9 @@ const SuggestPage = () => (
           To suggest a federal department or agency to add to the dataset
         </li>
       </ul>
-      <p>Thanks for your contributions to isthisblockedinmydepartment.ca! </p>
       <p>
-        <Link to="/">Back to the homepage</Link>
+        Thanks for your contributions to{' '}
+        <Link to="/">isthisblockedinmydepartment.ca</Link>!{' '}
       </p>
     </div>
   </Layout>

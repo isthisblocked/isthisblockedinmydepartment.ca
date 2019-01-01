@@ -9,12 +9,7 @@ const AboutPage = () => (
   <Layout pageTitle="About this project">
     <div className={styles.textLimit}>
       <h1>About this project</h1>
-
       <IntroText descriptionVisible={true} hideToggle={true} />
-
-      <p>
-        <Link to="/">Back to the homepage</Link>
-      </p>
     </div>
   </Layout>
 )
