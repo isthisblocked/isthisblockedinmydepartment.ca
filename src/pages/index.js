@@ -18,7 +18,7 @@ class IndexPage extends React.Component {
     sortLinksActiveLabel: 'highest',
     homepageRows: {},
     sortedHomepageRows: [],
-    showPrelaunchPlaceholder: true,
+    showPrelaunchPlaceholder: false,
     loadingIndicator: true,
   }
 
