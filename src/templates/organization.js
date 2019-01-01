@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import _ from 'lodash'
 import styles from '../styles/sass.module.scss'
 import DepartmentServiceCollection from '../components/DepartmentServiceCollection'
@@ -56,6 +57,13 @@ class Organization extends React.Component {
               Last updated: {this.props.data.organizationStatusCsv.date_updated}
             </li>
           </ul>
+
+          <p className={styles.textLimit}>
+            <b>Improve this data!</b> Are you an employee at{' '}
+            {organization.name_en}? If the information below is incorrect or out
+            of date, you can{' '}
+            <Link to="/suggest">anonymously suggest improvements</Link>.
+          </p>
 
           {this.props.data.allServiceCategoriesCsv.edges.map((row, i) => (
             <DepartmentServiceCollection
