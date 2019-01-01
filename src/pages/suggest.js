@@ -5,7 +5,7 @@ import styles from '../styles/sass.module.scss'
 import Layout from '../components/layout'
 
 const SuggestPage = () => (
-  <Layout>
+  <Layout pageTitle="Suggest an update">
     <div className={styles.textLimit}>
       <h1>Suggest an update</h1>
       <p>

@@ -6,7 +6,7 @@ import IntroText from '../components/IntroText'
 import Layout from '../components/layout'
 
 const AboutPage = () => (
-  <Layout>
+  <Layout pageTitle="About this project">
     <div className={styles.textLimit}>
       <h1>About this project</h1>
 

@@ -8,7 +8,7 @@ import Layout from '../components/layout'
 class OrganizationPage extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout pageTitle="Departments and Agencies">
         <div className={styles.textLimit}>
           <h1>Departments and Agencies</h1>
           <p>

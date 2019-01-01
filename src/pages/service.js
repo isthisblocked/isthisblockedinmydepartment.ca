@@ -34,7 +34,7 @@ class ServicePage extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout pageTitle="Online services">
         <div className={styles.textLimit}>
           <h1>Online services</h1>
           <p>

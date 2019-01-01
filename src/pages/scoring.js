@@ -5,7 +5,7 @@ import styles from '../styles/sass.module.scss'
 import Layout from '../components/layout'
 
 const ScoringPage = () => (
-  <Layout>
+  <Layout pageTitle="Scoring">
     <div className={styles.textLimit}>
       <h1>Scoring</h1>
       <p>
