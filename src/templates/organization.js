@@ -47,23 +47,44 @@ class Organization extends React.Component {
                 Visit website
               </a>
             </li>
-            <li className={styles.listInlineItem}>
-              Score:{' '}
-              <span className={styles.departmentScoreNumber}>
-                {this.props.data.organizationStatusCsv.score}
-              </span>
-            </li>
-            <li className={styles.listInlineItem}>
-              Last updated: {this.props.data.organizationStatusCsv.date_updated}
-            </li>
+            {this.props.data.organizationStatusCsv.score === '0' && (
+              <li className={styles.listInlineItem}>
+                <em>No data yet</em>
+              </li>
+            )}
+            {this.props.data.organizationStatusCsv.score !== '0' && (
+              <>
+                <li className={styles.listInlineItem}>
+                  Score:{' '}
+                  <span className={styles.departmentScoreNumber}>
+                    {this.props.data.organizationStatusCsv.score}
+                  </span>
+                </li>
+                <li className={styles.listInlineItem}>
+                  Last updated:{' '}
+                  {this.props.data.organizationStatusCsv.date_updated}
+                </li>
+              </>
+            )}
           </ul>
 
-          <p className={styles.textLimit}>
-            <b>Improve this data!</b> Are you an employee at{' '}
-            {organization.name_en}? If the information below is incorrect or out
-            of date, you can{' '}
-            <Link to="/suggest">anonymously suggest improvements</Link>.
-          </p>
+          {this.props.data.organizationStatusCsv.score === '0' && (
+            <p className={styles.textLimit}>
+              <b>Improve this data!</b> Are you an employee at{' '}
+              {organization.name_en}? You can help complete the information
+              below by{' '}
+              <Link to="/suggest">anonymously suggesting improvements</Link>.
+              Thanks for your help!
+            </p>
+          )}
+          {this.props.data.organizationStatusCsv.score !== '0' && (
+            <p className={styles.textLimit}>
+              <b>Improve this data!</b> Are you an employee at{' '}
+              {organization.name_en}? If the information below is incorrect or
+              out of date, you can{' '}
+              <Link to="/suggest">anonymously suggest improvements</Link>.
+            </p>
+          )}
 
           {this.props.data.allServiceCategoriesCsv.edges.map((row, i) => (
             <DepartmentServiceCollection
