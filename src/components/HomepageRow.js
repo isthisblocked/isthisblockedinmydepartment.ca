@@ -21,12 +21,14 @@ class HomepageRow extends React.Component {
             </>
           )}
         </div>
-        <div className={styles.departmentDateUpdated}>
-          Updated:{' '}
-          <span className={styles.departmentDateUpdatedValue}>
-            {this.props.dateUpdated}
-          </span>
-        </div>
+        {this.props.score !== 0 && (
+          <div className={styles.departmentDateUpdated}>
+            Updated:{' '}
+            <span className={styles.departmentDateUpdatedValue}>
+              {this.props.dateUpdated}
+            </span>
+          </div>
+        )}
       </div>
     )
   }

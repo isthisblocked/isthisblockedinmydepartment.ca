@@ -14,9 +14,11 @@ class ServiceDepartmentRow extends React.Component {
           <span className={styles[this.props.status]}>&nbsp;</span>
         </div>
         <div className={styles.serviceStatus}>{this.props.status}</div>
-        <div className={styles.departmentDateUpdated}>
-          Updated: {this.props.dateUpdated}
-        </div>
+        {this.props.status !== 'unknown' && (
+          <div className={styles.departmentDateUpdated}>
+            Updated: {this.props.dateUpdated}
+          </div>
+        )}
       </div>
     )
   }
