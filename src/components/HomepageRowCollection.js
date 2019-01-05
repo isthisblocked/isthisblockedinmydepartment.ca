@@ -15,6 +15,7 @@ class HomepageRowCollection extends React.Component {
             organizationName={row.name_en}
             score={row.score}
             dateUpdated={row.date_updated}
+            totalServices={this.props.totalServices}
           />
         ))}
       </>

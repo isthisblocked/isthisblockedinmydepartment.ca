@@ -199,6 +199,7 @@ class IndexPage extends React.Component {
 
             <HomepageRowCollection
               sortedHomepageRows={this.state.sortedHomepageRows}
+              totalServices={this.props.data.allServicesCsv.totalCount}
             />
           </>
         )}
@@ -234,6 +235,9 @@ export const IndexPageQuery = graphql`
           date_updated
         }
       }
+    }
+    allServicesCsv(filter: { hidden: { ne: "1" } }) {
+      totalCount
     }
   }
 `

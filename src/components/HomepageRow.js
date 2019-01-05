@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import _ from 'lodash'
 import cx from 'classnames'
 import styles from '../styles/sass.module.scss'
 
@@ -18,6 +19,13 @@ class HomepageRow extends React.Component {
               <span className={styles.departmentScoreNumber}>
                 {this.props.score}{' '}
               </span>
+              (
+              {Math.round(
+                (_.toInteger(this.props.score) /
+                  (this.props.totalServices * 3)) *
+                  100
+              )}
+              %)
             </>
           )}
         </div>

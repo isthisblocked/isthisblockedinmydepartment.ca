@@ -58,7 +58,14 @@ class Organization extends React.Component {
                   Score:{' '}
                   <span className={styles.departmentScoreNumber}>
                     {this.props.data.organizationStatusCsv.score}
-                  </span>
+                  </span>{' '}
+                  (
+                  {Math.round(
+                    (_.toInteger(this.props.data.organizationStatusCsv.score) /
+                      (this.props.data.allServicesCsv.totalCount * 3)) *
+                      100
+                  )}
+                  %)
                 </li>
                 <li className={styles.listInlineItem}>
                   Last updated:{' '}
@@ -132,6 +139,7 @@ export const organizationQuery = graphql`
           description
         }
       }
+      totalCount
     }
     organizationStatusCsv(organization: { eq: $acronym }) {
       score
