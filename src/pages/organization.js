@@ -12,8 +12,13 @@ class OrganizationPage extends React.Component {
         <div className={styles.textLimit}>
           <h1>Departments and Agencies</h1>
           <p>
-            Select a department or agency below for details on which online
-            services are available or blocked from within that organization.
+            This website lists which online services are open by default,
+            restricted, or blocked in Canadian federal government departments
+            and agencies.
+          </p>
+          <p>
+            Select a department or agency below for details on which services
+            are available or blocked from within that organization.
           </p>
           <ul className={styles.listStandard}>
             {this.props.data.allOrganizationsCsv.edges.map((row, i) => (

@@ -75,6 +75,12 @@ class Organization extends React.Component {
             )}
           </ul>
 
+          <p className={styles.textLimit}>
+            The list below shows which online services are open by default,
+            restricted (or available on request), or blocked at{' '}
+            {organization.name_en}.
+          </p>
+
           {this.props.data.organizationStatusCsv.score === '0' && (
             <p className={styles.textLimit}>
               <b>Improve this data!</b> Are you an employee at{' '}

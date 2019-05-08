@@ -33,7 +33,12 @@ class Service extends React.Component {
             </a>
           </p>
 
-          <h2>Department status</h2>
+          <h2>Is {this.props.data.servicesCsv.name} blocked?</h2>
+          <p className={styles.textLimit}>
+            The list below shows which Canadian federal departments and agencies
+            allow, restrict, or block access to{' '}
+            {this.props.data.servicesCsv.name}.
+          </p>
           {this.props.data.allOrganizationStatusCsv.edges.map((row, i) => (
             <ServiceDepartmentRow
               key={row.node.id}
