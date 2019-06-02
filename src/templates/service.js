@@ -118,16 +118,21 @@ export const servicesQuery = graphql`
       linkedin
       mozillafirefox
       prezi
+      python
       quip
+      rstudio
       reddit
       skype
       slack
       slideshare
       surveymonkey
+      tableau
       trello
       twitter
       webex
+      yammer
       youtube
+      zoom
       zotero
     }
   }
