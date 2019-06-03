@@ -93,7 +93,8 @@ class Service extends React.Component {
             <p className={styles.textLimit}>
               <b>Not much data is available for this service yet.</b> You can
               help improve it by{' '}
-              <Link to="/suggest">adding your suggestions!</Link>
+              <Link to="/suggest">adding your suggestions</Link>!{' '}
+              <Link to="/service">See other services</Link>
             </p>
           )}
           {this.props.data.allOrganizationStatusCsv.edges.map((row, i) => (
