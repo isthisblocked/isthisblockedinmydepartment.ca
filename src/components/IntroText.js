@@ -45,7 +45,11 @@ class IntroText extends React.Component {
               instructs departments to reconfigure their web filtering rules to
               be open by default to the Internet, aside from limited exceptions
               (websites that support criminal behaviour or other activities that
-              violate government policies or operations).
+              violate government policies or operations).{' '}
+              <a href="https://open.canada.ca/data/en/dataset/d7aae979-e1e3-4017-a77b-b83bf9ae5f34">
+                Self-reported data on departments’ compliance with the policy
+              </a>{' '}
+              was published on the Open Government website in February 2019.
             </p>
 
             <p>
@@ -53,6 +57,14 @@ class IntroText extends React.Component {
               available in what departments, and which are blocked. In many
               cases, these tools are only available on request, which can be
               time-consuming and difficult to obtain.{' '}
+            </p>
+
+            <p>
+              Some of the tools listed here are installed software products (for
+              example, web browsers and data science applications), rather than
+              online services. These are beyond the specific scope of the
+              policies listed above, but are still tremendously valuable to
+              public servants working in modern ways.
             </p>
 
             <p>
