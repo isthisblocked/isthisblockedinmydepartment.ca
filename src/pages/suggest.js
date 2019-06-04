@@ -77,8 +77,23 @@ const SuggestPage = () => (
         </li>
       </ul>
       <p>
+        For other questions or feedback, you can{' '}
+        <a
+          href="https://github.com/isthisblocked/isthisblockedinmydepartment.ca/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          create a new issue on GitHub
+        </a>{' '}
+        or send an email to{' '}
+        <a href="mailto:isthisblockedinmydepartment@gmail.com">
+          isthisblockedinmydepartment@gmail.com
+        </a>
+        .
+      </p>
+      <p>
         Thanks for your contributions to{' '}
-        <Link to="/">isthisblockedinmydepartment.ca</Link>!{' '}
+        <Link to="/">isthisblockedinmydepartment.ca</Link>!
       </p>
     </div>
   </Layout>
