@@ -97,6 +97,7 @@ class Service extends React.Component {
               <Link to="/service">See other services</Link>
             </p>
           )}
+          <h2>Department status</h2>
           {this.props.data.allOrganizationStatusCsv.edges.map((row, i) => (
             <ServiceDepartmentRow
               key={row.node.id}
