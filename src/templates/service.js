@@ -181,6 +181,7 @@ export const servicesQuery = graphql`
       quip
       rstudio
       reddit
+      rocketchat
       skype
       slack
       slideshare

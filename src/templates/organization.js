@@ -173,6 +173,7 @@ export const organizationQuery = graphql`
       quip
       rstudio
       reddit
+      rocketchat
       skype
       slack
       slideshare
