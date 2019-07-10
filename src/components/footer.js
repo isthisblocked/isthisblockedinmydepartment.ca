@@ -35,6 +35,15 @@ const Footer = () => (
             View on GitHub
           </a>
         </li>
+        <li className={styles.listInlineItem}>
+          <a
+            href="https://twitter.com/isthisblocked"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @isthisblocked
+          </a>
+        </li>
       </ul>
     </div>
   </div>
