@@ -29,6 +29,18 @@ class IndexPage extends React.Component {
     let sortLinksActiveLabel
     let descriptionVisible
 
+    // Temporary fix to unregister the (broken) offline service worker (2019-08-04)
+    // Thanks to
+    // https://stackoverflow.com/a/47515250
+    if (window.navigator && navigator.serviceWorker) {
+      navigator.serviceWorker.getRegistrations().then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister()
+          console.log('Unregistered old service worker successfully.')
+        }
+      })
+    }
+
     // Get initial sort state from local storage
     const localStorageRef = localStorage.getItem('localState')
     if (localStorageRef) {
