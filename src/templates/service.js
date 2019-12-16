@@ -159,7 +159,6 @@ export const servicesQuery = graphql`
       organization
       date_updated
       airtable
-      appearin
       asana
       basecamp
       circleci
@@ -167,7 +166,9 @@ export const servicesQuery = graphql`
       dropbox
       evernote
       facebook
+      figma
       fluidsurveys
+      funretro
       gist
       github
       googlechrome
@@ -185,11 +186,13 @@ export const servicesQuery = graphql`
       skype
       slack
       slideshare
+      slido
       surveymonkey
       tableau
       trello
       twitter
       webex
+      appearin
       yammer
       youtube
       zoom

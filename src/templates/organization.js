@@ -151,7 +151,6 @@ export const organizationQuery = graphql`
       score
       date_updated
       airtable
-      appearin
       asana
       basecamp
       circleci
@@ -159,7 +158,9 @@ export const organizationQuery = graphql`
       dropbox
       evernote
       facebook
+      figma
       fluidsurveys
+      funretro
       gist
       github
       googlechrome
@@ -177,11 +178,13 @@ export const organizationQuery = graphql`
       skype
       slack
       slideshare
+      slido
       surveymonkey
       tableau
       trello
       twitter
       webex
+      appearin
       yammer
       youtube
       zoom
