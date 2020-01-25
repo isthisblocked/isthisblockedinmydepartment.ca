@@ -4,6 +4,12 @@ import cx from 'classnames'
 import styles from '../styles/sass.module.scss'
 
 class DepartmentServiceRow extends React.Component {
+  // Thanks to
+  // https://stackoverflow.com/a/48388363
+  Capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1)
+  }
+
   render() {
     const { name, description } = this.props.serviceDetails
     return (
@@ -16,7 +22,9 @@ class DepartmentServiceRow extends React.Component {
         <div className={styles.serviceStatusIndicator}>
           <span className={styles[this.props.status]}>&nbsp;</span>
         </div>
-        <div className={styles.serviceStatus}>{this.props.status}</div>
+        <div className={styles.serviceStatus}>
+          {this.Capitalize(this.props.status)}
+        </div>
       </div>
     )
   }
