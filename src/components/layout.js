@@ -28,7 +28,7 @@ const Layout = ({ children, pageTitle }) => (
         <Helmet
           title={
             pageTitle
-              ? pageTitle + ' - ' + data.site.siteMetadata.title
+              ? pageTitle + ' – ' + data.site.siteMetadata.title
               : data.site.siteMetadata.title
           }
           meta={[
