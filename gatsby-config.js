@@ -1,6 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: 'Is this blocked in my department.ca',
+    description:
+      'An unofficial dashboard of which online services are available or blocked by federal government departments in Canada.',
+    keywords:
+      'Canada, public service, Government of Canada, digital government, information technology, public sector',
+    siteUrl: 'https://isthisblockedinmydepartment.ca',
+    twitterUsername: '@isthisblocked',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -16,6 +16,9 @@ const Layout = ({ children, pageTitle }) => (
         site {
           siteMetadata {
             title
+            description
+            keywords
+            twitterUsername
           }
         }
       }
@@ -31,13 +34,29 @@ const Layout = ({ children, pageTitle }) => (
           meta={[
             {
               name: 'description',
-              content:
-                'An unofficial dashboard of which online services are available or blocked by federal government departments in Canada.',
+              content: data.site.siteMetadata.description,
             },
             {
               name: 'keywords',
-              content:
-                'Canada, public service, Government of Canada, digital government, information technology, public sector',
+              content: data.site.siteMetadata.keywords,
+            },
+            {
+              name: 'twitter:card',
+              content: 'summary',
+            },
+            {
+              name: 'twitter:site',
+              content: data.site.siteMetadata.twitterUsername,
+            },
+            {
+              name: 'twitter:description',
+              content: data.site.siteMetadata.description,
+            },
+            {
+              name: 'twitter:title',
+              content: pageTitle
+                ? pageTitle + ' - ' + data.site.siteMetadata.title
+                : data.site.siteMetadata.title,
             },
           ]}
         >
