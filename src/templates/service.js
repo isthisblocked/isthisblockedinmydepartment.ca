@@ -175,6 +175,7 @@ export const servicesQuery = graphql`
       googledocs
       googlehangouts
       hootsuite
+      instagram
       linkedin
       mozillafirefox
       prezi

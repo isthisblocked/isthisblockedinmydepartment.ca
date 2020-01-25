@@ -167,6 +167,7 @@ export const organizationQuery = graphql`
       googledocs
       googlehangouts
       hootsuite
+      instagram
       linkedin
       mozillafirefox
       prezi
