@@ -15,42 +15,58 @@ class IntroText extends React.Component {
 
         {this.props.descriptionVisible && (
           <>
-            <p>
-              The 2014{' '}
-              <a
-                href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=27122#cha5"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Policy on Acceptable Network and Device Use
-              </a>{' '}
-              (PANDU) states that public servants should have “open access to
-              the Internet including Government of Canada and external Web 2.0
-              tools and services”, to support enhanced communication and
-              collaboration, and to improve productivity and program and service
-              delivery.
-            </p>
-            <p>
-              In June 2018, the federal Treasury Board{' '}
-              <a
-                href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32588#cha5"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                released an IT Policy Implementation Notice
-              </a>{' '}
-              re-iterating the importance of providing access to these tools,
-              saying that “open access to modern tools is essential to
-              transforming how public servants work and serve Canadians”. It
-              instructs departments to reconfigure their web filtering rules to
-              be open by default to the Internet, aside from limited exceptions
-              (websites that support criminal behaviour or other activities that
-              violate government policies or operations).{' '}
-              <a href="https://open.canada.ca/data/en/dataset/d7aae979-e1e3-4017-a77b-b83bf9ae5f34">
-                Self-reported data on departments’ compliance with the policy
-              </a>{' '}
-              was published on the Open Government website in February 2019.
-            </p>
+            <ul>
+              <li>
+                The 2014{' '}
+                <a
+                  href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=27122#cha5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Policy on Acceptable Network and Device Use
+                </a>{' '}
+                (PANDU) states that public servants should have “open access to
+                the Internet including Government of Canada and external Web 2.0
+                tools and services”, to support enhanced communication and
+                collaboration, and to improve productivity and program and
+                service delivery.
+              </li>
+              <li>
+                In June 2018, the federal Treasury Board{' '}
+                <a
+                  href="http://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32588#cha5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  released an IT Policy Implementation Notice
+                </a>{' '}
+                re-iterating the importance of providing access to these tools,
+                saying that “open access to modern tools is essential to
+                transforming how public servants work and serve Canadians”. It
+                instructs departments to reconfigure their web filtering rules
+                to be open by default to the Internet, aside from limited
+                exceptions (websites that support criminal behaviour or other
+                activities that violate government policies or operations).{' '}
+                <a href="https://open.canada.ca/data/en/dataset/d7aae979-e1e3-4017-a77b-b83bf9ae5f34">
+                  Self-reported data on departments’ compliance with the policy
+                </a>{' '}
+                was published on the Open Government website in February 2019.
+              </li>
+              <li>
+                If a website or online tool is blocked in your department, you
+                can visit{' '}
+                <a
+                  href="https://shoulditbeblockedinmydepartment.ca/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  shoulditbeblockedinmydepartment.ca
+                </a>{' '}
+                (a companion website) for advice and frequently asked questions
+                on how to use and adopt these tools in a Government of Canada
+                setting.
+              </li>
+            </ul>
 
             <p>
               This website provides an overview of which online tools are

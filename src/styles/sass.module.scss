@@ -139,8 +139,11 @@ body {
 }
 
 .introText {
-  p {
+  p, ul {
     max-width: $textWidth;
+  }
+  p, ul li {
+    margin-bottom: 1em;
   }
 }
 

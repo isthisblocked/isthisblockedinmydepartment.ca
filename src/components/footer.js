@@ -35,6 +35,17 @@ const Footer = () => (
             View on GitHub
           </a>
         </li>
+      </ul>
+      <ul className={styles.listInline}>
+        <li className={styles.listInlineItem}>
+          <a
+            href="https://shoulditbeblockedinmydepartment.ca/"
+            target="_blank"
+            rel="noopener"
+          >
+            Should it be blocked in my department?
+          </a>
+        </li>
         <li className={styles.listInlineItem}>
           <a
             href="https://twitter.com/isthisblocked"
