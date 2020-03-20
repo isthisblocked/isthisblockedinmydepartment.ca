@@ -163,6 +163,7 @@ export const organizationQuery = graphql`
       funretro
       gist
       github
+      gmail
       googlechrome
       googledocs
       googlehangouts

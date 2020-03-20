@@ -171,6 +171,7 @@ export const servicesQuery = graphql`
       funretro
       gist
       github
+      gmail
       googlechrome
       googledocs
       googlehangouts
