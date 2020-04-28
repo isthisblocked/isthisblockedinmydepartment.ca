@@ -161,6 +161,7 @@ export const organizationQuery = graphql`
       figma
       fluidsurveys
       funretro
+      gccollab
       gist
       github
       gmail
