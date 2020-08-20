@@ -20,6 +20,9 @@
     "sanitize.css": "^7.0.3",
     "slash": "^2.0.0"
   },
+  "resolutions": {
+    "minipass": "2.7.0"
+  },
   "keywords": [
     "gatsby"
   ],
