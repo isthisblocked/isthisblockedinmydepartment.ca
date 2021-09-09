@@ -159,9 +159,11 @@ export const servicesQuery = graphql`
       organization
       date_updated
       airtable
+      appearin
       asana
       basecamp
       circleci
+      discord
       doodle
       dropbox
       evernote
@@ -179,13 +181,14 @@ export const servicesQuery = graphql`
       hootsuite
       instagram
       linkedin
+      miro
       mozillafirefox
       prezi
       python
       quip
-      rstudio
       reddit
       rocketchat
+      rstudio
       skype
       slack
       slideshare
@@ -193,9 +196,9 @@ export const servicesQuery = graphql`
       surveymonkey
       tableau
       trello
+      twitch
       twitter
       webex
-      appearin
       yammer
       youtube
       zoom
