@@ -21,7 +21,7 @@ class Service extends React.Component {
     let totalBlocked = 0
     let totalKnown = 0
     let shortName = this.props.data.servicesCsv.short_name
-    _.each(this.props.data.allOrganizationStatusCsv.edges, function(edge) {
+    _.each(this.props.data.allOrganizationStatusCsv.edges, function (edge) {
       let status = edge.node[shortName]
 
       if (status === 'open') {
@@ -183,6 +183,7 @@ export const servicesQuery = graphql`
       linkedin
       miro
       mozillafirefox
+      notion
       prezi
       python
       quip

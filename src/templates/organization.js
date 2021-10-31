@@ -175,6 +175,7 @@ export const organizationQuery = graphql`
       linkedin
       miro
       mozillafirefox
+      notion
       prezi
       python
       quip
