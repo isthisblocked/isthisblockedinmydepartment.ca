@@ -32,7 +32,9 @@
     "develop": "gatsby develop",
     "deploy": "gatsby build && gh-pages -d public -b gh-pages",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mvdata": "mv ~/Downloads/Source\\ data\\ -\\ organization_status.csv ~/Sites/isthisblocked/src/data/organization_status.csv && npm run develop",
+    "commit": "git add src/data && git commit -m \"Updated data for $(date +%Y-%m-%d)\" && git push origin master"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
