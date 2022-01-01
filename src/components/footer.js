@@ -48,11 +48,20 @@ const Footer = () => (
         </li>
         <li className={styles.listInlineItem}>
           <a
-            href="https://twitter.com/isthisblocked"
+            href="https://sboots.ca/2022/01/01/is-this-blocked-in-my-department-2021-year-in-review/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @isthisblocked
+            2021 Recap
+          </a>
+        </li>
+        <li className={styles.listInlineItem}>
+          <a
+            href="https://sboots.ca/2021/01/04/is-this-blocked-in-my-department-a-year-in-review/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            2020 Recap
           </a>
         </li>
       </ul>
