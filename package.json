@@ -13,7 +13,7 @@
     "gatsby-source-filesystem": "^2.0.38",
     "gatsby-transformer-csv": "^2.0.5",
     "lodash": "^4.17.15",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
