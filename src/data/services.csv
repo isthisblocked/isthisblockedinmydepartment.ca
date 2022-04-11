@@ -2,6 +2,7 @@ name,category,short_name,url,date_added,user_submitted,hidden,installed_software
 Airtable,dev,airtable,https://airtable.com/,2018-09-09,0,0,0,Collaborative API-based spreadsheet and database platform.
 Whereby,messaging,appearin,https://whereby.com/,2018-08-07,0,0,0,Web-based videoconferencing software (formerly named AppearIn).
 Asana,collab,asana,https://asana.com/,2018-08-07,0,0,0,Time tracking and task management software.
+Basecamp,collab,basecamp,https://basecamp.com/,2018-08-07,0,0,0,Project management and team communications software.
 CircleCI,dev,circleci,https://circleci.com/,2018-08-07,0,0,0,Continuous integration and automated testing service.
 Discord,social,discord,https://discord.com/,2021-09-09,1,0,0,"Online voice chat, instant messaging and community management platform."
 Doodle,collab,doodle,https://doodle.com/,2018-08-07,0,0,0,Online meeting coordination and scheduling tool.
@@ -21,9 +22,12 @@ Google Meet,messaging,googlehangouts,https://meet.google.com/,2018-08-07,0,0,0,W
 Hootsuite,social,hootsuite,https://hootsuite.com/,2018-08-07,0,0,0,Social media management platform.
 Instagram,social,instagram,https://www.instagram.com/,2020-01-24,1,0,0,Social media photo and video sharing platform.
 LinkedIn,social,linkedin,https://www.linkedin.com/,2019-05-07,1,0,0,Professional networking social media platform.
+Mentimeter,collab,mentimeter,https://www.mentimeter.com/,2022-04-10,1,0,0,Online participant engagement tool.
 Miro,collab,miro,https://miro.com/,2021-09-09,1,0,0,Online collaboration and virtual whiteboarding tool.
 Mozilla Firefox,browsers,mozillafirefox,https://www.mozilla.org/en-CA/firefox/new/,2018-08-07,0,0,1,Open-source web browser from Mozilla.
+Mural,collab,mural,https://www.mural.co/,2022-04-10,1,0,0,Digital whiteboard and collaboration tool.
 Notion,collab,notion,https://notion.so,2021-10-31,1,0,0,All-in-one workspace for teamwork.
+Power BI,data,powerbi,https://powerbi.microsoft.com/en-ca/,2022-04-10,1,0,0,Data visualization and analysis software.
 Prezi,collab,prezi,https://prezi.com/,2018-08-07,0,0,0,Online presentation design tool.
 Python,data,python,https://www.python.org/,2019-06-02,0,0,1,Interactive programming language widely adopted in the data science community.
 Reddit,social,reddit,https://www.reddit.com/,2018-09-29,0,0,0,"Social media website including user communities, news, and other content."
@@ -33,15 +37,16 @@ Skype,messaging,skype,https://www.skype.com/en/,2018-08-07,0,0,1,Videoconferenci
 Slack,messaging,slack,https://slack.com/,2018-08-07,0,0,0,Team chat platform.
 Slideshare,collab,slideshare,https://www.slideshare.net/,2018-08-07,0,0,0,Online presentation sharing website.
 Slido,collab,slido,https://www.sli.do/,2019-12-15,1,0,0,Polling platform for meetings and events.
+SSH,dev,ssh,https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview,2022-04-10,1,0,1,Command-line protocol (Secure Shell) to securely access external networks.
 SurveyMonkey,collab,surveymonkey,https://www.surveymonkey.com/,2018-08-07,0,0,0,Online survey and market research platform.
 Tableau,data,tableau,https://www.tableau.com/,2019-06-02,0,0,0,Online data science and visualization tools.
 Trello,collab,trello,https://trello.com/,2018-08-07,0,0,0,Team project management and visual task tracking software.
 Twitch,social,twitch,https://www.twitch.tv/,2021-09-09,1,0,0,Live video streaming platform.
 Twitter,social,twitter,https://twitter.com/,2018-08-07,0,0,0,Real-time social media platform.
 WebEx,messaging,webex,https://www.webex.com/,2018-08-07,0,0,1,Videoconferencing and meeting software.
+Wonder,collab,wonder,https://wonder.me/,2022-04-10,1,0,0,A virtual networking space for events.
+Windows Subsystem for Linux,dev,wsl,https://docs.microsoft.com/en-us/windows/wsl/about,2022-04-10,1,0,1,"Lets developers run a GNU/Linux environment directly on Windows, without the overhead of a traditional virtual machine."
 Yammer,collab,yammer,https://www.yammer.com/,2019-06-02,1,0,0,"Online collaboration platform, including documents and messaging."
 YouTube,social,youtube,https://www.youtube.com/,2018-08-07,0,0,0,Online video-sharing website.
 Zoom,messaging,zoom,https://zoom.us/,2018-10-09,0,0,0,Web-based videoconferencing software.
-Basecamp,collab,basecamp,https://basecamp.com/,2018-08-07,0,1,0,Project management and team communications software.
-Quip,collab,quip,https://quip.com/,2018-08-07,0,1,0,"Team collaboration platform, including documents, spreadsheets, checklists, and team chat ."
-Zotero,collab,zotero,https://www.zotero.org/,2018-08-07,0,1,0,Open-source bibliography and reference management software.
+Zotero,collab,zotero,https://www.zotero.org/,2018-08-07,0,0,1,Open-source bibliography and reference management software.

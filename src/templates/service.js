@@ -181,12 +181,14 @@ export const servicesQuery = graphql`
       hootsuite
       instagram
       linkedin
+      mentimeter
       miro
       mozillafirefox
+      mural
       notion
+      powerbi
       prezi
       python
-      quip
       reddit
       rocketchat
       rstudio
@@ -194,12 +196,15 @@ export const servicesQuery = graphql`
       slack
       slideshare
       slido
+      ssh
       surveymonkey
       tableau
       trello
       twitch
       twitter
       webex
+      wonder
+      wsl
       yammer
       youtube
       zoom
