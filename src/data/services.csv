@@ -2,7 +2,7 @@ name,category,short_name,url,date_added,user_submitted,hidden,installed_software
 Airtable,dev,airtable,https://airtable.com/,2018-09-09,0,0,0,Collaborative API-based spreadsheet and database platform.
 Whereby,messaging,appearin,https://whereby.com/,2018-08-07,0,0,0,Web-based videoconferencing software (formerly named AppearIn).
 Asana,collab,asana,https://asana.com/,2018-08-07,0,0,0,Time tracking and task management software.
-Basecamp,collab,basecamp,https://basecamp.com/,2018-08-07,0,0,0,Project management and team communications software.
+Basecamp,collab,basecamp,https://basecamp.com/,2018-08-07,0,1,0,Project management and team communications software.
 CircleCI,dev,circleci,https://circleci.com/,2018-08-07,0,0,0,Continuous integration and automated testing service.
 Discord,social,discord,https://discord.com/,2021-09-09,1,0,0,"Online voice chat, instant messaging and community management platform."
 Doodle,collab,doodle,https://doodle.com/,2018-08-07,0,0,0,Online meeting coordination and scheduling tool.
