@@ -4,6 +4,7 @@ Whereby,messaging,appearin,https://whereby.com/,2018-08-07,0,0,0,Web-based video
 Asana,collab,asana,https://asana.com/,2018-08-07,0,0,0,Time tracking and task management software.
 Basecamp,collab,basecamp,https://basecamp.com/,2018-08-07,0,1,0,Project management and team communications software.
 CircleCI,dev,circleci,https://circleci.com/,2018-08-07,0,0,0,Continuous integration and automated testing service.
+Coda,collab,coda,https://www.coda.io/,2022-08-10,1,0,0,"Online co-authoring collaboration tool, with document creation and storage, forms for data collection, and synthesized reporting."
 Discord,social,discord,https://discord.com/,2021-09-09,1,0,0,"Online voice chat, instant messaging and community management platform."
 Doodle,collab,doodle,https://doodle.com/,2018-08-07,0,0,0,Online meeting coordination and scheduling tool.
 Dropbox,collab,dropbox,https://www.dropbox.com/,2018-08-07,0,0,0,Online document storage and syncing platform.
@@ -49,4 +50,4 @@ Windows Subsystem for Linux,dev,wsl,https://docs.microsoft.com/en-us/windows/wsl
 Yammer,collab,yammer,https://www.yammer.com/,2019-06-02,1,0,0,"Online collaboration platform, including documents and messaging."
 YouTube,social,youtube,https://www.youtube.com/,2018-08-07,0,0,0,Online video-sharing website.
 Zoom,messaging,zoom,https://zoom.us/,2018-10-09,0,0,0,Web-based videoconferencing software.
-Zotero,collab,zotero,https://www.zotero.org/,2018-08-07,0,0,1,Open-source bibliography and reference management software.
+Zotero,collab,zotero,https://www.zotero.org/,2018-08-07,0,1,1,Open-source bibliography and reference management software.

@@ -154,6 +154,7 @@ export const organizationQuery = graphql`
       appearin
       asana
       basecamp
+      coda
       circleci
       discord
       doodle
