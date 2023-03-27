@@ -38,6 +38,12 @@ module.exports = {
         anonymize: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-plausible`,
+      options: {
+        domain: `isthisblockedinmydepartment.ca`,
+      },
+    },
     `gatsby-transformer-csv`,
   ],
 }
